@@ -22,11 +22,32 @@ namespace vista
             Close();
         }
 
-        
+        public static bool valilog(string user, string pass)
+        {
+            if (user == "admin" && pass == "admin")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
 
         private void btnini_Click(object sender, EventArgs e)
         {
-           
+            string user = txtuser.Text;
+            string passw = txtpass.Text;
+
+            if (valilog(user, passw))
+            {
+                MessageBox.Show("ingreso exitoso", "validador", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("error al iniciar sesion", "validador", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
