@@ -56,6 +56,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GestionarArticulos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionarArticulos.Designer.cs">
+      <DependentUpon>GestionarArticulos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionarProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionarProveedores.Designer.cs">
+      <DependentUpon>GestionarProveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionarUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionarUsuarios.Designer.cs">
+      <DependentUpon>GestionarUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +94,21 @@
     <Compile Include="Registro.Designer.cs">
       <DependentUpon>Registro.cs</DependentUpon>
     </Compile>
+    <Compile Include="vista admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista admin.Designer.cs">
+      <DependentUpon>vista admin.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="GestionarArticulos.resx">
+      <DependentUpon>GestionarArticulos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionarProveedores.resx">
+      <DependentUpon>GestionarProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionarUsuarios.resx">
+      <DependentUpon>GestionarUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -93,6 +126,9 @@
     </Compile>
     <EmbeddedResource Include="Registro.resx">
       <DependentUpon>Registro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vista admin.resx">
+      <DependentUpon>vista admin.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

@@ -42,7 +42,9 @@ namespace vista
 
             if (valilog(user, passw))
             {
-                MessageBox.Show("ingreso exitoso", "validador", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                vista_admin frm = new vista_admin();
+                frm.Show();
+                //MessageBox.Show("ingreso exitoso", "validador", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
