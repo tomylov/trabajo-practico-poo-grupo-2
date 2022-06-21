@@ -5,7 +5,13 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="a0e67a74c1874096a47eb151d85382c6" Name="Diagram1" >
-        <EntityTypeShape EntityType="Contexto.Usuario" Width="1.5" PointX="0.625" PointY="0.625" />
+        <EntityTypeShape EntityType="Contexto.Usuario" Width="1.5" PointX="0.5" PointY="0.5" />
+        <EntityTypeShape EntityType="Contexto.Formulario" Width="1.5" PointX="5.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Contexto.permiso" Width="1.5" PointX="2.625" PointY="2.875" />
+        <EntityTypeShape EntityType="Contexto.perfil" Width="1.5" PointX="2.75" PointY="0.5" />
+        <AssociationConnector Association="Contexto.Usuarioperfil" />
+        <AssociationConnector Association="Contexto.perfilFormulario" />
+        <AssociationConnector Association="Contexto.Formulariopermiso" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
