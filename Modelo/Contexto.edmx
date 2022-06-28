@@ -4,11 +4,199 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl" Namespace="Contexto.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005">
-        <EntityContainer Name="ContextoTargetContainer" >
-        </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+    <Schema Namespace="Contexto.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="ContextoStoreContainer">
+    <EntitySet Name="Usuarios" EntityType="Contexto.Store.Usuarios" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Formulario" EntityType="Contexto.Store.Formulario" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="permisoSet" EntityType="Contexto.Store.permisoSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="perfil" EntityType="Contexto.Store.perfil" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Ventas" EntityType="Contexto.Store.Ventas" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Detalle_ventas" EntityType="Contexto.Store.Detalle_ventas" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Articulos" EntityType="Contexto.Store.Articulos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Formulariopermiso" EntityType="Contexto.Store.Formulariopermiso" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="Usuarioperfil" Association="Contexto.Store.Usuarioperfil">
+      <End Role="Usuario" EntitySet="Usuarios" />
+      <End Role="perfil" EntitySet="perfil" />
+    </AssociationSet>
+    <AssociationSet Name="perfilFormulario" Association="Contexto.Store.perfilFormulario">
+      <End Role="perfil" EntitySet="perfil" />
+      <End Role="Formulario" EntitySet="Formulario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Formulariopermiso_Formulario" Association="Contexto.Store.FK_Formulariopermiso_Formulario">
+      <End Role="Formulario" EntitySet="Formulario" />
+      <End Role="Formulariopermiso" EntitySet="Formulariopermiso" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Formulariopermiso_permiso" Association="Contexto.Store.FK_Formulariopermiso_permiso">
+      <End Role="permiso" EntitySet="permisoSet" />
+      <End Role="Formulariopermiso" EntitySet="Formulariopermiso" />
+    </AssociationSet>
+    <AssociationSet Name="VentasUsuario" Association="Contexto.Store.VentasUsuario">
+      <End Role="Ventas" EntitySet="Ventas" />
+      <End Role="Usuario" EntitySet="Usuarios" />
+    </AssociationSet>
+    <AssociationSet Name="VentasDetalle_ventas" Association="Contexto.Store.VentasDetalle_ventas">
+      <End Role="Ventas" EntitySet="Ventas" />
+      <End Role="Detalle_ventas" EntitySet="Detalle_ventas" />
+    </AssociationSet>
+    <AssociationSet Name="ArticulosDetalle_ventas" Association="Contexto.Store.ArticulosDetalle_ventas">
+      <End Role="Articulos" EntitySet="Articulos" />
+      <End Role="Detalle_ventas" EntitySet="Detalle_ventas" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Usuarios">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DNI" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Email" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Contraseña" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Telefono" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="perfil_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Formulario">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="NombreSistema" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="perfilId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="permisoSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="NombreSistema" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="perfil">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Ventas">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fecha" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Usuario_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Detalle_ventas">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cantidad" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Ventas_Id" Type="int" Nullable="false" />
+    <Property Name="Articulos_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Articulos">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="stock" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Formulariopermiso">
+    <Key>
+      <PropertyRef Name="Formulario_Id" />
+      <PropertyRef Name="permiso_Id" />
+    </Key>
+    <Property Name="Formulario_Id" Type="int" Nullable="false" />
+    <Property Name="permiso_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="Usuarioperfil">
+    <End Role="Usuario" Type="Contexto.Store.Usuarios" Multiplicity="*" />
+    <End Role="perfil" Type="Contexto.Store.perfil" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="perfil">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Usuario">
+        <PropertyRef Name="perfil_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="perfilFormulario">
+    <End Role="perfil" Type="Contexto.Store.perfil" Multiplicity="1" />
+    <End Role="Formulario" Type="Contexto.Store.Formulario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="perfil">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Formulario">
+        <PropertyRef Name="perfilId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="VentasUsuario">
+    <End Role="Ventas" Type="Contexto.Store.Ventas" Multiplicity="*" />
+    <End Role="Usuario" Type="Contexto.Store.Usuarios" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Ventas">
+        <PropertyRef Name="Usuario_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="VentasDetalle_ventas">
+    <End Role="Ventas" Type="Contexto.Store.Ventas" Multiplicity="1" />
+    <End Role="Detalle_ventas" Type="Contexto.Store.Detalle_ventas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ventas">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Detalle_ventas">
+        <PropertyRef Name="Ventas_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ArticulosDetalle_ventas">
+    <End Role="Articulos" Type="Contexto.Store.Articulos" Multiplicity="1" />
+    <End Role="Detalle_ventas" Type="Contexto.Store.Detalle_ventas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Articulos">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Detalle_ventas">
+        <PropertyRef Name="Articulos_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Formulariopermiso_Formulario">
+    <End Role="Formulario" Type="Contexto.Store.Formulario" Multiplicity="1" />
+    <End Role="Formulariopermiso" Type="Contexto.Store.Formulariopermiso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Formulario">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Formulariopermiso">
+        <PropertyRef Name="Formulario_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Formulariopermiso_permiso">
+    <End Role="Formulariopermiso" Type="Contexto.Store.Formulariopermiso" Multiplicity="*" />
+    <End Role="permiso" Type="Contexto.Store.permisoSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="permiso">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Formulariopermiso">
+        <PropertyRef Name="permiso_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Contexto" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
@@ -29,6 +217,21 @@
             <End Role="Formulario" EntitySet="Formulario" />
             <End Role="permiso" EntitySet="permisoSet" />
           </AssociationSet>
+          <EntitySet Name="Ventas" EntityType="Contexto.Ventas" />
+          <EntitySet Name="Detalle_ventas" EntityType="Contexto.Detalle_ventas" />
+          <EntitySet Name="Articulos" EntityType="Contexto.Articulos" />
+          <AssociationSet Name="VentasUsuario" Association="Contexto.VentasUsuario">
+            <End Role="Ventas" EntitySet="Ventas" />
+            <End Role="Usuario" EntitySet="Usuarios" />
+          </AssociationSet>
+          <AssociationSet Name="VentasDetalle_ventas" Association="Contexto.VentasDetalle_ventas">
+            <End Role="Ventas" EntitySet="Ventas" />
+            <End Role="Detalle_ventas" EntitySet="Detalle_ventas" />
+          </AssociationSet>
+          <AssociationSet Name="ArticulosDetalle_ventas" Association="Contexto.ArticulosDetalle_ventas">
+            <End Role="Articulos" EntitySet="Articulos" />
+            <End Role="Detalle_ventas" EntitySet="Detalle_ventas" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="Usuario">
           <Key>
@@ -41,6 +244,7 @@
           <Property Name="Nombre" Type="String" Nullable="false" />
           <Property Name="Telefono" Type="String" Nullable="false" />
           <NavigationProperty Name="perfil" Relationship="Contexto.Usuarioperfil" FromRole="Usuario" ToRole="perfil" />
+          <NavigationProperty Name="Ventas" Relationship="Contexto.VentasUsuario" FromRole="Usuario" ToRole="Ventas" />
         </EntityType>
         <EntityType Name="Formulario">
           <Key>
@@ -91,17 +295,157 @@
           <End Type="Contexto.Formulario" Role="Formulario" Multiplicity="*" />
           <End Type="Contexto.permiso" Role="permiso" Multiplicity="*" />
         </Association>
+        <EntityType Name="Ventas">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="fecha" Type="String" Nullable="false" />
+          <NavigationProperty Name="Usuario" Relationship="Contexto.VentasUsuario" FromRole="Ventas" ToRole="Usuario" />
+          <NavigationProperty Name="Detalle_ventas" Relationship="Contexto.VentasDetalle_ventas" FromRole="Ventas" ToRole="Detalle_ventas" />
+        </EntityType>
+        <EntityType Name="Detalle_ventas">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="cantidad" Type="String" Nullable="false" />
+          <NavigationProperty Name="Ventas" Relationship="Contexto.VentasDetalle_ventas" FromRole="Detalle_ventas" ToRole="Ventas" />
+          <NavigationProperty Name="Articulos" Relationship="Contexto.ArticulosDetalle_ventas" FromRole="Detalle_ventas" ToRole="Articulos" />
+        </EntityType>
+        <EntityType Name="Articulos">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" Nullable="false" />
+          <Property Name="stock" Type="String" Nullable="false" />
+          <NavigationProperty Name="Detalle_ventas" Relationship="Contexto.ArticulosDetalle_ventas" FromRole="Articulos" ToRole="Detalle_ventas" />
+        </EntityType>
+        <Association Name="VentasUsuario">
+          <End Type="Contexto.Ventas" Role="Ventas" Multiplicity="*" />
+          <End Type="Contexto.Usuario" Role="Usuario" Multiplicity="1" />
+        </Association>
+        <Association Name="VentasDetalle_ventas">
+          <End Type="Contexto.Ventas" Role="Ventas" Multiplicity="1" />
+          <End Type="Contexto.Detalle_ventas" Role="Detalle_ventas" Multiplicity="*" />
+        </Association>
+        <Association Name="ArticulosDetalle_ventas">
+          <End Type="Contexto.Articulos" Role="Articulos" Multiplicity="1" />
+          <End Type="Contexto.Detalle_ventas" Role="Detalle_ventas" Multiplicity="*" />
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
-      <Mapping xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs" Space="C-S">
-        <Alias Key="Model" Value="Contexto" />
-        <Alias Key="Target" Value="Contexto.Store" />
-        <EntityContainerMapping CdmEntityContainer="ContextoContainer" StorageEntityContainer="ContextoTargetContainer">
-        </EntityContainerMapping>
-      </Mapping>
-    </edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ContextoStoreContainer" CdmEntityContainer="ContextoContainer">
+    <EntitySetMapping Name="Usuarios">
+      <EntityTypeMapping TypeName="IsTypeOf(Contexto.Usuario)">
+        <MappingFragment StoreEntitySet="Usuarios">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Contraseña" ColumnName="Contraseña" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Formulario">
+      <EntityTypeMapping TypeName="IsTypeOf(Contexto.Formulario)">
+        <MappingFragment StoreEntitySet="Formulario">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="NombreSistema" ColumnName="NombreSistema" />
+          <ScalarProperty Name="perfilId" ColumnName="perfilId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="permisoSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Contexto.permiso)">
+        <MappingFragment StoreEntitySet="permisoSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="NombreSistema" ColumnName="NombreSistema" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="perfil">
+      <EntityTypeMapping TypeName="IsTypeOf(Contexto.perfil)">
+        <MappingFragment StoreEntitySet="perfil">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ventas">
+      <EntityTypeMapping TypeName="IsTypeOf(Contexto.Ventas)">
+        <MappingFragment StoreEntitySet="Ventas">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Detalle_ventas">
+      <EntityTypeMapping TypeName="IsTypeOf(Contexto.Detalle_ventas)">
+        <MappingFragment StoreEntitySet="Detalle_ventas">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Articulos">
+      <EntityTypeMapping TypeName="IsTypeOf(Contexto.Articulos)">
+        <MappingFragment StoreEntitySet="Articulos">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="stock" ColumnName="stock" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="Usuarioperfil" TypeName="Contexto.Usuarioperfil" StoreEntitySet="Usuarios">
+      <EndProperty Name="perfil">
+        <ScalarProperty Name="Id" ColumnName="perfil_Id" />
+      </EndProperty>
+      <EndProperty Name="Usuario">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="Formulariopermiso" TypeName="Contexto.Formulariopermiso" StoreEntitySet="Formulariopermiso">
+      <EndProperty Name="Formulario">
+        <ScalarProperty Name="Id" ColumnName="Formulario_Id" />
+      </EndProperty>
+      <EndProperty Name="permiso">
+        <ScalarProperty Name="Id" ColumnName="permiso_Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="VentasUsuario" TypeName="Contexto.VentasUsuario" StoreEntitySet="Ventas">
+      <EndProperty Name="Usuario">
+        <ScalarProperty Name="Id" ColumnName="Usuario_Id" />
+      </EndProperty>
+      <EndProperty Name="Ventas">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="VentasDetalle_ventas" TypeName="Contexto.VentasDetalle_ventas" StoreEntitySet="Detalle_ventas">
+      <EndProperty Name="Ventas">
+        <ScalarProperty Name="Id" ColumnName="Ventas_Id" />
+      </EndProperty>
+      <EndProperty Name="Detalle_ventas">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ArticulosDetalle_ventas" TypeName="Contexto.ArticulosDetalle_ventas" StoreEntitySet="Detalle_ventas">
+      <EndProperty Name="Articulos">
+        <ScalarProperty Name="Id" ColumnName="Articulos_Id" />
+      </EndProperty>
+      <EndProperty Name="Detalle_ventas">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
   </edmx:Runtime>
   <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
@@ -115,6 +459,7 @@
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
         <DesignerProperty Name="EnablePluralization" Value="False" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
       </DesignerInfoPropertySet>
     </edmx:Options>
     <!-- Diagram content (shape and connector positions) -->

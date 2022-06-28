@@ -22,3 +22,15 @@ C:\Users\Tomás AREAS KARLE\source\repos\trabajo-practico-poo-grupo-2\Modelo\obj
 C:\Users\Tomás AREAS KARLE\source\repos\trabajo-practico-poo-grupo-2\Modelo\obj\Debug\Modelo.csproj.CopyComplete
 C:\Users\Tomás AREAS KARLE\source\repos\trabajo-practico-poo-grupo-2\Modelo\obj\Debug\Modelo.dll
 C:\Users\Tomás AREAS KARLE\source\repos\trabajo-practico-poo-grupo-2\Modelo\obj\Debug\Modelo.pdb
+C:\Users\Tomás AREAS KARLE\Desktop\28\trabajo-practico-poo-grupo-2\Modelo\bin\Debug\Modelo.dll.config
+C:\Users\Tomás AREAS KARLE\Desktop\28\trabajo-practico-poo-grupo-2\Modelo\bin\Debug\Modelo.dll
+C:\Users\Tomás AREAS KARLE\Desktop\28\trabajo-practico-poo-grupo-2\Modelo\bin\Debug\Modelo.pdb
+C:\Users\Tomás AREAS KARLE\Desktop\28\trabajo-practico-poo-grupo-2\Modelo\bin\Debug\EntityFramework.dll
+C:\Users\Tomás AREAS KARLE\Desktop\28\trabajo-practico-poo-grupo-2\Modelo\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Tomás AREAS KARLE\Desktop\28\trabajo-practico-poo-grupo-2\Modelo\bin\Debug\EntityFramework.xml
+C:\Users\Tomás AREAS KARLE\Desktop\28\trabajo-practico-poo-grupo-2\Modelo\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Tomás AREAS KARLE\Desktop\28\trabajo-practico-poo-grupo-2\Modelo\obj\Debug\Modelo.csproj.AssemblyReference.cache
+C:\Users\Tomás AREAS KARLE\Desktop\28\trabajo-practico-poo-grupo-2\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
+C:\Users\Tomás AREAS KARLE\Desktop\28\trabajo-practico-poo-grupo-2\Modelo\obj\Debug\Modelo.csproj.CopyComplete
+C:\Users\Tomás AREAS KARLE\Desktop\28\trabajo-practico-poo-grupo-2\Modelo\obj\Debug\Modelo.dll
+C:\Users\Tomás AREAS KARLE\Desktop\28\trabajo-practico-poo-grupo-2\Modelo\obj\Debug\Modelo.pdb
