@@ -9,8 +9,6 @@
         <EntityTypeShape EntityType="Contexto.Formulario" Width="1.5" PointX="10.875" PointY="2.125" />
         <EntityTypeShape EntityType="Contexto.permiso" Width="1.5" PointX="7.75" PointY="4.25" />
         <EntityTypeShape EntityType="Contexto.Perfil" Width="1.5" PointX="7.875" PointY="1.875" />
-        <AssociationConnector Association="Contexto.Usuarioperfil" />
-        <AssociationConnector Association="Contexto.perfilFormulario" />
         <AssociationConnector Association="Contexto.Formulariopermiso" />
         <EntityTypeShape EntityType="Contexto.Ventas" Width="1.5" PointX="3.125" PointY="0.75" />
         <EntityTypeShape EntityType="Contexto.Detalle_ventas" Width="1.5" PointX="3.125" PointY="3.125" />
@@ -18,6 +16,8 @@
         <AssociationConnector Association="Contexto.VentasUsuario" />
         <AssociationConnector Association="Contexto.VentasDetalle_ventas" />
         <AssociationConnector Association="Contexto.ArticulosDetalle_ventas" />
+        <AssociationConnector Association="Contexto.PerfilUsuario" />
+        <AssociationConnector Association="Contexto.PerfilFormulario" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

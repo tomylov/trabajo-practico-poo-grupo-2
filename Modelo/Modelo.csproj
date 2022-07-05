@@ -78,13 +78,15 @@
     <Compile Include="Formulario.cs">
       <DependentUpon>Contexto.tt</DependentUpon>
     </Compile>
-    <Compile Include="perfil.cs">
+    <Compile Include="Perfil.cs">
       <DependentUpon>Contexto.tt</DependentUpon>
     </Compile>
+    <Compile Include="Perfiles.cs" />
     <Compile Include="permiso.cs">
       <DependentUpon>Contexto.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Singleton_Contexto.cs" />
     <Compile Include="Usuario.cs">
       <DependentUpon>Contexto.tt</DependentUpon>
     </Compile>

@@ -24,9 +24,10 @@ namespace Modelo
         public string Nombre { get; set; }
         public string NombreSistema { get; set; }
         public int perfilId { get; set; }
+        public int PerfilId1 { get; set; }
     
-        public virtual perfil perfil { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<permiso> permiso { get; set; }
+        public virtual Perfil Perfil { get; set; }
     }
 }

@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Modelo
 {
-    internal class Perfiles
+    public partial class Perfil  
     {
+        public override string ToString()
+        {
+            return this.Nombre;
+        }
     }
 }

@@ -12,10 +12,10 @@ namespace Modelo
     using System;
     using System.Collections.Generic;
     
-    public partial class perfil
+    public partial class Perfil
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public perfil()
+        public Perfil()
         {
             this.Usuario = new HashSet<Usuario>();
             this.Formulario = new HashSet<Formulario>();

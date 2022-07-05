@@ -2,8 +2,8 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 06/28/2022 09:42:48
--- Generated from EDMX file: C:\Users\Tomás AREAS KARLE\Desktop\28\trabajo-practico-poo-grupo-2\Modelo\Contexto.edmx
+-- Date Created: 07/05/2022 11:11:03
+-- Generated from EDMX file: C:\Users\Tomás AREAS KARLE\Desktop\nueva\trabajo-practico-poo-grupo-2\Modelo\Contexto.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
@@ -17,11 +17,56 @@ GO
 -- Dropping existing FOREIGN KEY constraints
 -- --------------------------------------------------
 
+IF OBJECT_ID(N'[dbo].[FK_Usuarioperfil]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Usuarios] DROP CONSTRAINT [FK_Usuarioperfil];
+GO
+IF OBJECT_ID(N'[dbo].[FK_perfilFormulario]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Formulario] DROP CONSTRAINT [FK_perfilFormulario];
+GO
+IF OBJECT_ID(N'[dbo].[FK_Formulariopermiso_Formulario]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Formulariopermiso] DROP CONSTRAINT [FK_Formulariopermiso_Formulario];
+GO
+IF OBJECT_ID(N'[dbo].[FK_Formulariopermiso_permiso]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Formulariopermiso] DROP CONSTRAINT [FK_Formulariopermiso_permiso];
+GO
+IF OBJECT_ID(N'[dbo].[FK_VentasUsuario]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Ventas] DROP CONSTRAINT [FK_VentasUsuario];
+GO
+IF OBJECT_ID(N'[dbo].[FK_VentasDetalle_ventas]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Detalle_ventas] DROP CONSTRAINT [FK_VentasDetalle_ventas];
+GO
+IF OBJECT_ID(N'[dbo].[FK_ArticulosDetalle_ventas]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Detalle_ventas] DROP CONSTRAINT [FK_ArticulosDetalle_ventas];
+GO
 
 -- --------------------------------------------------
 -- Dropping existing tables
 -- --------------------------------------------------
 
+IF OBJECT_ID(N'[dbo].[Usuarios]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Usuarios];
+GO
+IF OBJECT_ID(N'[dbo].[Formulario]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Formulario];
+GO
+IF OBJECT_ID(N'[dbo].[permisoSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[permisoSet];
+GO
+IF OBJECT_ID(N'[dbo].[perfil]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[perfil];
+GO
+IF OBJECT_ID(N'[dbo].[Ventas]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Ventas];
+GO
+IF OBJECT_ID(N'[dbo].[Detalle_ventas]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Detalle_ventas];
+GO
+IF OBJECT_ID(N'[dbo].[Articulos]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Articulos];
+GO
+IF OBJECT_ID(N'[dbo].[Formulariopermiso]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Formulariopermiso];
+GO
 
 -- --------------------------------------------------
 -- Creating all tables
@@ -35,7 +80,7 @@ CREATE TABLE [dbo].[Usuarios] (
     [Contraseña] nvarchar(max)  NOT NULL,
     [Nombre] nvarchar(max)  NOT NULL,
     [Telefono] nvarchar(max)  NOT NULL,
-    [perfil_Id] int  NOT NULL
+    [PerfilId] int  NOT NULL
 );
 GO
 
@@ -44,7 +89,8 @@ CREATE TABLE [dbo].[Formulario] (
     [Id] int IDENTITY(1,1) NOT NULL,
     [Nombre] nvarchar(max)  NOT NULL,
     [NombreSistema] nvarchar(max)  NOT NULL,
-    [perfilId] int  NOT NULL
+    [perfilId] int  NOT NULL,
+    [PerfilId1] int  NOT NULL
 );
 GO
 
@@ -56,8 +102,8 @@ CREATE TABLE [dbo].[permisoSet] (
 );
 GO
 
--- Creating table 'perfil'
-CREATE TABLE [dbo].[perfil] (
+-- Creating table 'Perfiles'
+CREATE TABLE [dbo].[Perfiles] (
     [Id] int IDENTITY(1,1) NOT NULL,
     [Nombre] nvarchar(max)  NOT NULL
 );
@@ -117,9 +163,9 @@ ADD CONSTRAINT [PK_permisoSet]
     PRIMARY KEY CLUSTERED ([Id] ASC);
 GO
 
--- Creating primary key on [Id] in table 'perfil'
-ALTER TABLE [dbo].[perfil]
-ADD CONSTRAINT [PK_perfil]
+-- Creating primary key on [Id] in table 'Perfiles'
+ALTER TABLE [dbo].[Perfiles]
+ADD CONSTRAINT [PK_Perfiles]
     PRIMARY KEY CLUSTERED ([Id] ASC);
 GO
 
@@ -150,36 +196,6 @@ GO
 -- --------------------------------------------------
 -- Creating all FOREIGN KEY constraints
 -- --------------------------------------------------
-
--- Creating foreign key on [perfil_Id] in table 'Usuarios'
-ALTER TABLE [dbo].[Usuarios]
-ADD CONSTRAINT [FK_Usuarioperfil]
-    FOREIGN KEY ([perfil_Id])
-    REFERENCES [dbo].[perfil]
-        ([Id])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
-GO
-
--- Creating non-clustered index for FOREIGN KEY 'FK_Usuarioperfil'
-CREATE INDEX [IX_FK_Usuarioperfil]
-ON [dbo].[Usuarios]
-    ([perfil_Id]);
-GO
-
--- Creating foreign key on [perfilId] in table 'Formulario'
-ALTER TABLE [dbo].[Formulario]
-ADD CONSTRAINT [FK_perfilFormulario]
-    FOREIGN KEY ([perfilId])
-    REFERENCES [dbo].[perfil]
-        ([Id])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
-GO
-
--- Creating non-clustered index for FOREIGN KEY 'FK_perfilFormulario'
-CREATE INDEX [IX_FK_perfilFormulario]
-ON [dbo].[Formulario]
-    ([perfilId]);
-GO
 
 -- Creating foreign key on [Formulario_Id] in table 'Formulariopermiso'
 ALTER TABLE [dbo].[Formulariopermiso]
@@ -248,6 +264,36 @@ GO
 CREATE INDEX [IX_FK_ArticulosDetalle_ventas]
 ON [dbo].[Detalle_ventas]
     ([Articulos_Id]);
+GO
+
+-- Creating foreign key on [PerfilId] in table 'Usuarios'
+ALTER TABLE [dbo].[Usuarios]
+ADD CONSTRAINT [FK_PerfilUsuario]
+    FOREIGN KEY ([PerfilId])
+    REFERENCES [dbo].[Perfiles]
+        ([Id])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_PerfilUsuario'
+CREATE INDEX [IX_FK_PerfilUsuario]
+ON [dbo].[Usuarios]
+    ([PerfilId]);
+GO
+
+-- Creating foreign key on [PerfilId1] in table 'Formulario'
+ALTER TABLE [dbo].[Formulario]
+ADD CONSTRAINT [FK_PerfilFormulario]
+    FOREIGN KEY ([PerfilId1])
+    REFERENCES [dbo].[Perfiles]
+        ([Id])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_PerfilFormulario'
+CREATE INDEX [IX_FK_PerfilFormulario]
+ON [dbo].[Formulario]
+    ([PerfilId1]);
 GO
 
 -- --------------------------------------------------
