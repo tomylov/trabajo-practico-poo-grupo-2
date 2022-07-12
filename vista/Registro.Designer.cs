@@ -56,7 +56,7 @@
             this.txtpass2.Location = new System.Drawing.Point(141, 211);
             this.txtpass2.Name = "txtpass2";
             this.txtpass2.Size = new System.Drawing.Size(100, 20);
-            this.txtpass2.TabIndex = 1;
+            this.txtpass2.TabIndex = 5;
             // 
             // txtdni
             // 
@@ -129,7 +129,7 @@
             this.btnnewuser.Location = new System.Drawing.Point(46, 268);
             this.btnnewuser.Name = "btnnewuser";
             this.btnnewuser.Size = new System.Drawing.Size(84, 30);
-            this.btnnewuser.TabIndex = 10;
+            this.btnnewuser.TabIndex = 6;
             this.btnnewuser.Text = "crear usuario";
             this.btnnewuser.UseVisualStyleBackColor = true;
             this.btnnewuser.Click += new System.EventHandler(this.button1_Click);
@@ -139,7 +139,7 @@
             this.button2.Location = new System.Drawing.Point(202, 268);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(83, 30);
-            this.button2.TabIndex = 11;
+            this.button2.TabIndex = 7;
             this.button2.Text = "cerrar";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -149,7 +149,7 @@
             this.txtphone.Location = new System.Drawing.Point(141, 51);
             this.txtphone.Name = "txtphone";
             this.txtphone.Size = new System.Drawing.Size(100, 20);
-            this.txtphone.TabIndex = 12;
+            this.txtphone.TabIndex = 1;
             // 
             // label6
             // 

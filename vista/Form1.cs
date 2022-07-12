@@ -15,18 +15,25 @@ namespace vista
         public Form1()
         {
             InitializeComponent();
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {            
             login frm = new login();
             frm.Show();
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             Registro frm = new Registro();
             frm.Show();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

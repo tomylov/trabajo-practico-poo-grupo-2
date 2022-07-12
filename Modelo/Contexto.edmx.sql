@@ -2,13 +2,13 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 07/05/2022 11:11:03
+-- Date Created: 07/12/2022 08:42:39
 -- Generated from EDMX file: C:\Users\Tomás AREAS KARLE\Desktop\nueva\trabajo-practico-poo-grupo-2\Modelo\Contexto.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
 GO
-USE [POO_grupo2];
+USE [POO_grupo2bd];
 GO
 IF SCHEMA_ID(N'dbo') IS NULL EXECUTE(N'CREATE SCHEMA [dbo]');
 GO
@@ -17,12 +17,6 @@ GO
 -- Dropping existing FOREIGN KEY constraints
 -- --------------------------------------------------
 
-IF OBJECT_ID(N'[dbo].[FK_Usuarioperfil]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[Usuarios] DROP CONSTRAINT [FK_Usuarioperfil];
-GO
-IF OBJECT_ID(N'[dbo].[FK_perfilFormulario]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[Formulario] DROP CONSTRAINT [FK_perfilFormulario];
-GO
 IF OBJECT_ID(N'[dbo].[FK_Formulariopermiso_Formulario]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[Formulariopermiso] DROP CONSTRAINT [FK_Formulariopermiso_Formulario];
 GO
@@ -38,6 +32,12 @@ GO
 IF OBJECT_ID(N'[dbo].[FK_ArticulosDetalle_ventas]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[Detalle_ventas] DROP CONSTRAINT [FK_ArticulosDetalle_ventas];
 GO
+IF OBJECT_ID(N'[dbo].[FK_PerfilUsuario]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Usuarios] DROP CONSTRAINT [FK_PerfilUsuario];
+GO
+IF OBJECT_ID(N'[dbo].[FK_PerfilFormulario]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Formulario] DROP CONSTRAINT [FK_PerfilFormulario];
+GO
 
 -- --------------------------------------------------
 -- Dropping existing tables
@@ -52,8 +52,8 @@ GO
 IF OBJECT_ID(N'[dbo].[permisoSet]', 'U') IS NOT NULL
     DROP TABLE [dbo].[permisoSet];
 GO
-IF OBJECT_ID(N'[dbo].[perfil]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[perfil];
+IF OBJECT_ID(N'[dbo].[Perfiles]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Perfiles];
 GO
 IF OBJECT_ID(N'[dbo].[Ventas]', 'U') IS NOT NULL
     DROP TABLE [dbo].[Ventas];
