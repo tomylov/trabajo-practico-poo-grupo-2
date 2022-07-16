@@ -23,8 +23,18 @@ namespace vista
         }
         public bool valicontra()
         {
-            //hacer validacion
-            return true;
+            if (txtpass.Text == txtpass2.Text)
+            {
+                return true;
+            }
+            else
+            {
+                MessageBox.Show("las contraseñas no coinciden");
+                txtpass.Text = "";
+                txtpass2.Text = "";
+                return false;                
+            }
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -40,6 +50,8 @@ namespace vista
                 usuario.Telefono = txtphone.Text;
                 usuario.PerfilId = 2;
                 Controladora.Controladora_usuarios.obtener_instancia().Agregar_Usuario(usuario);
+                MessageBox.Show("usuario creado con exito");
+                this.Close();
             }
 
         }

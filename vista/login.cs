@@ -22,22 +22,27 @@ namespace vista
             Close();
         }
 
-        public static bool valilog(string user, string pass)
+        public static bool valilog(int user, string pass)
         {
-            if (user == "admin" && pass == "admin")
+            bool validador= false;
+            try
             {
-                return true;
+                Modelo.Usuario usuario = Controladora.Controladora_usuarios.obtener_instancia().Obtener_Usuario(user);
+                if (usuario.Contraseña == pass)
+                {
+                    validador = true;
+                }
             }
-            else
+            catch (Exception)
             {
-                return false;
+                MessageBox.Show("usuario/contraseña incorrecto", "validador", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
+            return validador;
         }
 
         private void btnini_Click(object sender, EventArgs e)
         {
-            string user = txtuser.Text;
+            int user = int.Parse(txtuser.Text);
             string passw = txtpass.Text;
 
             if (valilog(user, passw))
@@ -46,10 +51,7 @@ namespace vista
                 frm.Show();
                 //MessageBox.Show("ingreso exitoso", "validador", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            else
-            {
-                MessageBox.Show("error al iniciar sesion", "validador", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            
         }
     }
 }

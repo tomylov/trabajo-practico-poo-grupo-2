@@ -10,7 +10,7 @@ SET QUOTED_IDENTIFIER OFF;
 GO
 USE [POO_grupo2bd];
 GO
-IF SCHEMA_ID(N'dbo') IS NULL EXECUTE(N'CREATE SCHEMA [dbo]');
+IF SCHEMA_ID(N'dbo') IS NULL EXECUTE(N'CREATE SCHEMA [dbo]');   
 GO
 
 -- --------------------------------------------------

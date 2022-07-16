@@ -57,6 +57,7 @@
             this.txtpass2.Name = "txtpass2";
             this.txtpass2.Size = new System.Drawing.Size(100, 20);
             this.txtpass2.TabIndex = 5;
+            this.txtpass2.UseSystemPasswordChar = true;
             // 
             // txtdni
             // 
@@ -78,6 +79,7 @@
             this.txtpass.Name = "txtpass";
             this.txtpass.Size = new System.Drawing.Size(100, 20);
             this.txtpass.TabIndex = 4;
+            this.txtpass.UseSystemPasswordChar = true;
             // 
             // label1
             // 
