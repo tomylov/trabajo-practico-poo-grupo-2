@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 
 namespace Controladora
 {
-    class sql_consulta
+    public class sql_consulta
     {
         public static DataSet Ejecutar(string cmd)
         {

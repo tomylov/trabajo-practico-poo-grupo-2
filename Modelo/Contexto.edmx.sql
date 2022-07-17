@@ -2,15 +2,15 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 07/12/2022 08:42:39
--- Generated from EDMX file: C:\Users\Tomás AREAS KARLE\Desktop\nueva\trabajo-practico-poo-grupo-2\Modelo\Contexto.edmx
+-- Date Created: 07/17/2022 18:41:47
+-- Generated from EDMX file: C:\Users\PC\Desktop\asd\trabajo-practico-poo-grupo-2\Modelo\Contexto.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
 GO
 USE [POO_grupo2bd];
 GO
-IF SCHEMA_ID(N'dbo') IS NULL EXECUTE(N'CREATE SCHEMA [dbo]');   
+IF SCHEMA_ID(N'dbo') IS NULL EXECUTE(N'CREATE SCHEMA [dbo]');
 GO
 
 -- --------------------------------------------------
@@ -113,6 +113,7 @@ GO
 CREATE TABLE [dbo].[Ventas] (
     [Id] int IDENTITY(1,1) NOT NULL,
     [fecha] nvarchar(max)  NOT NULL,
+    [estado] nvarchar(max)  NOT NULL,
     [Usuario_Id] int  NOT NULL
 );
 GO
@@ -130,7 +131,8 @@ GO
 CREATE TABLE [dbo].[Articulos] (
     [Id] int IDENTITY(1,1) NOT NULL,
     [nombre] nvarchar(max)  NOT NULL,
-    [stock] nvarchar(max)  NOT NULL
+    [stock] nvarchar(max)  NOT NULL,
+    [Precio] nvarchar(max)  NOT NULL
 );
 GO
 

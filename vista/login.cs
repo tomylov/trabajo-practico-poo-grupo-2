@@ -22,27 +22,37 @@ namespace vista
             Close();
         }
 
-        public static bool valilog(int user, string pass)
+        public static bool valilog(string user, string pass)
         {
+            string Contraseña = "";
             bool validador= false;
             try
             {
-                Modelo.Usuario usuario = Controladora.Controladora_usuarios.obtener_instancia().Obtener_Usuario(user);
-                if (usuario.Contraseña == pass)
-                {
-                    validador = true;
-                }
+                string CMD = string.Format("select * from Usuarios where Email='{0}'", user);
+                DataSet ds = Controladora.sql_consulta.Ejecutar(CMD);
+                Contraseña = ds.Tables[0].Rows[0]["Contraseña"].ToString().Trim();
             }
             catch (Exception)
             {
+                validador = false;
+            }
+
+            if (Contraseña != pass || pass == "")
+            {
+                validador = false;
                 MessageBox.Show("usuario/contraseña incorrecto", "validador", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                validador = true;
+
             }
             return validador;
         }
 
         private void btnini_Click(object sender, EventArgs e)
         {
-            int user = int.Parse(txtuser.Text);
+            string user = txtuser.Text;
             string passw = txtpass.Text;
 
             if (valilog(user, passw))

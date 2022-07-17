@@ -86,6 +86,7 @@
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="fecha" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="estado" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Usuario_Id" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Detalle_ventas">
@@ -104,6 +105,7 @@
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="nombre" Type="nvarchar(max)" Nullable="false" />
     <Property Name="stock" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Precio" Type="nvarchar(max)" Nullable="false" />
   </EntityType>
   <EntityType Name="Formulariopermiso">
     <Key>
@@ -290,6 +292,7 @@
           <Property Name="fecha" Type="String" Nullable="false" />
           <NavigationProperty Name="Usuario" Relationship="Contexto.VentasUsuario" FromRole="Ventas" ToRole="Usuario" />
           <NavigationProperty Name="Detalle_ventas" Relationship="Contexto.VentasDetalle_ventas" FromRole="Ventas" ToRole="Detalle_ventas" />
+          <Property Name="estado" Type="String" Nullable="false" />
         </EntityType>
         <EntityType Name="Detalle_ventas">
           <Key>
@@ -308,6 +311,7 @@
           <Property Name="nombre" Type="String" Nullable="false" />
           <Property Name="stock" Type="String" Nullable="false" />
           <NavigationProperty Name="Detalle_ventas" Relationship="Contexto.ArticulosDetalle_ventas" FromRole="Articulos" ToRole="Detalle_ventas" />
+          <Property Name="Precio" Type="String" Nullable="false" />
         </EntityType>
         <Association Name="VentasUsuario">
           <End Type="Contexto.Ventas" Role="Ventas" Multiplicity="*" />
@@ -397,6 +401,7 @@
         <MappingFragment StoreEntitySet="Ventas">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -414,6 +419,7 @@
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="nombre" ColumnName="nombre" />
           <ScalarProperty Name="stock" ColumnName="stock" />
+          <ScalarProperty Name="Precio" ColumnName="Precio" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
