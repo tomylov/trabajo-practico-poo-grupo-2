@@ -51,7 +51,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="consuta_sql.cs" />
     <Compile Include="Controladora_perfil.cs" />
     <Compile Include="Controladora_usuarios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
