@@ -15,9 +15,22 @@ namespace vista
         public GestionarUsuarios()
         {
             InitializeComponent();
+            dataGridView1.DataSource =Controladora.consuta_sql.LlenarDataGV("Usuarios","").Tables[0];
         }
 
+        
+
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void GestionarUsuarios_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnadd_Click(object sender, EventArgs e)
         {
 
         }
