@@ -58,9 +58,10 @@ namespace vista
             this.Precio,
             this.Cantidad,
             this.Importe});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 114);
+            this.dataGridView1.Location = new System.Drawing.Point(25, 92);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(544, 269);
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.Size = new System.Drawing.Size(503, 267);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -91,7 +92,7 @@ namespace vista
             // 
             // txtCod
             // 
-            this.txtCod.Location = new System.Drawing.Point(12, 74);
+            this.txtCod.Location = new System.Drawing.Point(25, 55);
             this.txtCod.Name = "txtCod";
             this.txtCod.Size = new System.Drawing.Size(100, 20);
             this.txtCod.TabIndex = 1;
@@ -99,14 +100,14 @@ namespace vista
             // 
             // txtDesc
             // 
-            this.txtDesc.Location = new System.Drawing.Point(118, 73);
+            this.txtDesc.Location = new System.Drawing.Point(131, 54);
             this.txtDesc.Name = "txtDesc";
             this.txtDesc.Size = new System.Drawing.Size(136, 20);
             this.txtDesc.TabIndex = 2;
             // 
             // txtCant
             // 
-            this.txtCant.Location = new System.Drawing.Point(260, 73);
+            this.txtCant.Location = new System.Drawing.Point(273, 54);
             this.txtCant.Name = "txtCant";
             this.txtCant.Size = new System.Drawing.Size(100, 20);
             this.txtCant.TabIndex = 4;
@@ -114,33 +115,37 @@ namespace vista
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(25, 45);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(25, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 13);
+            this.label1.Size = new System.Drawing.Size(67, 22);
             this.label1.TabIndex = 5;
             this.label1.Text = "Codigo";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(146, 45);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(146, 29);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 13);
+            this.label2.Size = new System.Drawing.Size(104, 22);
             this.label2.TabIndex = 6;
             this.label2.Text = "Descripcion";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(270, 45);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(279, 29);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 13);
+            this.label3.Size = new System.Drawing.Size(82, 22);
             this.label3.TabIndex = 8;
             this.label3.Text = "Cantidad";
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(374, 71);
+            this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.Location = new System.Drawing.Point(379, 52);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(75, 23);
             this.btnAgregar.TabIndex = 9;
@@ -150,7 +155,8 @@ namespace vista
             // 
             // btnArt
             // 
-            this.btnArt.Location = new System.Drawing.Point(473, 70);
+            this.btnArt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnArt.Location = new System.Drawing.Point(460, 52);
             this.btnArt.Name = "btnArt";
             this.btnArt.Size = new System.Drawing.Size(75, 23);
             this.btnArt.TabIndex = 10;
@@ -160,7 +166,8 @@ namespace vista
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(473, 35);
+            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.Location = new System.Drawing.Point(453, 381);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 11;
@@ -169,17 +176,18 @@ namespace vista
             // 
             // txtSub
             // 
-            this.txtSub.Location = new System.Drawing.Point(448, 402);
+            this.txtSub.Location = new System.Drawing.Point(322, 381);
             this.txtSub.Name = "txtSub";
-            this.txtSub.Size = new System.Drawing.Size(100, 20);
+            this.txtSub.Size = new System.Drawing.Size(108, 20);
             this.txtSub.TabIndex = 12;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(389, 405);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(238, 381);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 13);
+            this.label4.Size = new System.Drawing.Size(69, 20);
             this.label4.TabIndex = 13;
             this.label4.Text = "Subtotal";
             // 
@@ -187,7 +195,7 @@ namespace vista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(623, 460);
+            this.ClientSize = new System.Drawing.Size(570, 437);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtSub);
             this.Controls.Add(this.btnSalir);

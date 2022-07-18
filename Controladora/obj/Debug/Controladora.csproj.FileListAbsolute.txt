@@ -118,3 +118,18 @@ C:\Users\PC\Desktop\poo\trabajo-practico-poo-grupo-2\Controladora\obj\Debug\Cont
 C:\Users\PC\Desktop\poo\trabajo-practico-poo-grupo-2\Controladora\obj\Debug\Controladora.csproj.CopyComplete
 C:\Users\PC\Desktop\poo\trabajo-practico-poo-grupo-2\Controladora\obj\Debug\Controladora.dll
 C:\Users\PC\Desktop\poo\trabajo-practico-poo-grupo-2\Controladora\obj\Debug\Controladora.pdb
+E:\Users\alvar\Desktop\POO\Tp Acutalizado x2\trabajo-practico-poo-grupo-2\Controladora\bin\Debug\Controladora.dll.config
+E:\Users\alvar\Desktop\POO\Tp Acutalizado x2\trabajo-practico-poo-grupo-2\Controladora\bin\Debug\Controladora.dll
+E:\Users\alvar\Desktop\POO\Tp Acutalizado x2\trabajo-practico-poo-grupo-2\Controladora\bin\Debug\Controladora.pdb
+E:\Users\alvar\Desktop\POO\Tp Acutalizado x2\trabajo-practico-poo-grupo-2\Controladora\bin\Debug\EntityFramework.dll
+E:\Users\alvar\Desktop\POO\Tp Acutalizado x2\trabajo-practico-poo-grupo-2\Controladora\bin\Debug\EntityFramework.SqlServer.dll
+E:\Users\alvar\Desktop\POO\Tp Acutalizado x2\trabajo-practico-poo-grupo-2\Controladora\bin\Debug\Modelo.dll
+E:\Users\alvar\Desktop\POO\Tp Acutalizado x2\trabajo-practico-poo-grupo-2\Controladora\bin\Debug\Modelo.pdb
+E:\Users\alvar\Desktop\POO\Tp Acutalizado x2\trabajo-practico-poo-grupo-2\Controladora\bin\Debug\Modelo.dll.config
+E:\Users\alvar\Desktop\POO\Tp Acutalizado x2\trabajo-practico-poo-grupo-2\Controladora\bin\Debug\EntityFramework.xml
+E:\Users\alvar\Desktop\POO\Tp Acutalizado x2\trabajo-practico-poo-grupo-2\Controladora\bin\Debug\EntityFramework.SqlServer.xml
+E:\Users\alvar\Desktop\POO\Tp Acutalizado x2\trabajo-practico-poo-grupo-2\Controladora\obj\Debug\Controladora.csproj.AssemblyReference.cache
+E:\Users\alvar\Desktop\POO\Tp Acutalizado x2\trabajo-practico-poo-grupo-2\Controladora\obj\Debug\Controladora.csproj.CoreCompileInputs.cache
+E:\Users\alvar\Desktop\POO\Tp Acutalizado x2\trabajo-practico-poo-grupo-2\Controladora\obj\Debug\Controladora.csproj.CopyComplete
+E:\Users\alvar\Desktop\POO\Tp Acutalizado x2\trabajo-practico-poo-grupo-2\Controladora\obj\Debug\Controladora.dll
+E:\Users\alvar\Desktop\POO\Tp Acutalizado x2\trabajo-practico-poo-grupo-2\Controladora\obj\Debug\Controladora.pdb

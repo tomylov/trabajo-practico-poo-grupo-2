@@ -37,5 +37,10 @@ namespace vista
         {
 
         }
+
+        private void VistaCliente_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
