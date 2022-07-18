@@ -57,7 +57,7 @@ namespace vista
 
             if (valilog(user, passw))
             {
-                vista_admin frm = new vista_admin();
+                VistaCliente frm = new VistaCliente(user);
                 frm.Show();
                 //MessageBox.Show("ingreso exitoso", "validador", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }

@@ -12,7 +12,7 @@ namespace Controladora
     {
         public static DataSet Ejecutar(string cmd)
         {
-            SqlConnection con = new SqlConnection("Data Source=DESKTOP-QPP4BNK;Initial Catalog=POO_grupo2bd;Integrated Security=True");
+            SqlConnection con = new SqlConnection("Data Source=DESKTOP-M6BEUD9;Initial Catalog=POO_grupo2bd;Integrated Security=True");
             con.Open();
 
             DataSet DS = new DataSet();

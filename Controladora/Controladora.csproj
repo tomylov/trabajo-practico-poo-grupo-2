@@ -51,8 +51,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controladora_Detalle.cs" />
     <Compile Include="Controladora_perfil.cs" />
     <Compile Include="Controladora_usuarios.cs" />
+    <Compile Include="Controladora_ventas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="sql-consulta.cs" />
   </ItemGroup>

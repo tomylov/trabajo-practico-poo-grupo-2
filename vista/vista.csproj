@@ -56,6 +56,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgregarCarrito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarCarrito.Designer.cs">
+      <DependentUpon>AgregarCarrito.cs</DependentUpon>
+    </Compile>
     <Compile Include="GestionarArticulos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="GestionarVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionarVentas.Designer.cs">
+      <DependentUpon>GestionarVentas.cs</DependentUpon>
+    </Compile>
     <Compile Include="login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,12 +106,27 @@
     <Compile Include="Registro.Designer.cs">
       <DependentUpon>Registro.cs</DependentUpon>
     </Compile>
+    <Compile Include="VerCarrito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerCarrito.Designer.cs">
+      <DependentUpon>VerCarrito.cs</DependentUpon>
+    </Compile>
     <Compile Include="vista admin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="vista admin.Designer.cs">
       <DependentUpon>vista admin.cs</DependentUpon>
     </Compile>
+    <Compile Include="VistaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaCliente.Designer.cs">
+      <DependentUpon>VistaCliente.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AgregarCarrito.resx">
+      <DependentUpon>AgregarCarrito.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GestionarArticulos.resx">
       <DependentUpon>GestionarArticulos.cs</DependentUpon>
     </EmbeddedResource>
@@ -129,6 +156,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="vista admin.resx">
       <DependentUpon>vista admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaCliente.resx">
+      <DependentUpon>VistaCliente.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

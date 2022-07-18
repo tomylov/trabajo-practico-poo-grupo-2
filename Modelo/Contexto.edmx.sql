@@ -2,8 +2,8 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 07/17/2022 18:41:47
--- Generated from EDMX file: C:\Users\PC\Desktop\asd\trabajo-practico-poo-grupo-2\Modelo\Contexto.edmx
+-- Date Created: 07/17/2022 20:59:35
+-- Generated from EDMX file: E:\Users\alvar\Desktop\POO\TP Actual\trabajo-practico-poo-grupo-2\Modelo\Contexto.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
@@ -23,9 +23,6 @@ GO
 IF OBJECT_ID(N'[dbo].[FK_Formulariopermiso_permiso]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[Formulariopermiso] DROP CONSTRAINT [FK_Formulariopermiso_permiso];
 GO
-IF OBJECT_ID(N'[dbo].[FK_VentasUsuario]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[Ventas] DROP CONSTRAINT [FK_VentasUsuario];
-GO
 IF OBJECT_ID(N'[dbo].[FK_VentasDetalle_ventas]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[Detalle_ventas] DROP CONSTRAINT [FK_VentasDetalle_ventas];
 GO
@@ -37,6 +34,9 @@ IF OBJECT_ID(N'[dbo].[FK_PerfilUsuario]', 'F') IS NOT NULL
 GO
 IF OBJECT_ID(N'[dbo].[FK_PerfilFormulario]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[Formulario] DROP CONSTRAINT [FK_PerfilFormulario];
+GO
+IF OBJECT_ID(N'[dbo].[FK_UsuarioVentas]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Ventas] DROP CONSTRAINT [FK_UsuarioVentas];
 GO
 
 -- --------------------------------------------------
@@ -114,7 +114,7 @@ CREATE TABLE [dbo].[Ventas] (
     [Id] int IDENTITY(1,1) NOT NULL,
     [fecha] nvarchar(max)  NOT NULL,
     [estado] nvarchar(max)  NOT NULL,
-    [Usuario_Id] int  NOT NULL
+    [UsuarioId] int  NOT NULL
 );
 GO
 
@@ -122,8 +122,8 @@ GO
 CREATE TABLE [dbo].[Detalle_ventas] (
     [Id] int IDENTITY(1,1) NOT NULL,
     [cantidad] nvarchar(max)  NOT NULL,
-    [Ventas_Id] int  NOT NULL,
-    [Articulos_Id] int  NOT NULL
+    [ArticulosId] int  NOT NULL,
+    [VentasId] int  NOT NULL
 );
 GO
 
@@ -223,51 +223,6 @@ ON [dbo].[Formulariopermiso]
     ([permiso_Id]);
 GO
 
--- Creating foreign key on [Usuario_Id] in table 'Ventas'
-ALTER TABLE [dbo].[Ventas]
-ADD CONSTRAINT [FK_VentasUsuario]
-    FOREIGN KEY ([Usuario_Id])
-    REFERENCES [dbo].[Usuarios]
-        ([Id])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
-GO
-
--- Creating non-clustered index for FOREIGN KEY 'FK_VentasUsuario'
-CREATE INDEX [IX_FK_VentasUsuario]
-ON [dbo].[Ventas]
-    ([Usuario_Id]);
-GO
-
--- Creating foreign key on [Ventas_Id] in table 'Detalle_ventas'
-ALTER TABLE [dbo].[Detalle_ventas]
-ADD CONSTRAINT [FK_VentasDetalle_ventas]
-    FOREIGN KEY ([Ventas_Id])
-    REFERENCES [dbo].[Ventas]
-        ([Id])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
-GO
-
--- Creating non-clustered index for FOREIGN KEY 'FK_VentasDetalle_ventas'
-CREATE INDEX [IX_FK_VentasDetalle_ventas]
-ON [dbo].[Detalle_ventas]
-    ([Ventas_Id]);
-GO
-
--- Creating foreign key on [Articulos_Id] in table 'Detalle_ventas'
-ALTER TABLE [dbo].[Detalle_ventas]
-ADD CONSTRAINT [FK_ArticulosDetalle_ventas]
-    FOREIGN KEY ([Articulos_Id])
-    REFERENCES [dbo].[Articulos]
-        ([Id])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
-GO
-
--- Creating non-clustered index for FOREIGN KEY 'FK_ArticulosDetalle_ventas'
-CREATE INDEX [IX_FK_ArticulosDetalle_ventas]
-ON [dbo].[Detalle_ventas]
-    ([Articulos_Id]);
-GO
-
 -- Creating foreign key on [PerfilId] in table 'Usuarios'
 ALTER TABLE [dbo].[Usuarios]
 ADD CONSTRAINT [FK_PerfilUsuario]
@@ -296,6 +251,51 @@ GO
 CREATE INDEX [IX_FK_PerfilFormulario]
 ON [dbo].[Formulario]
     ([PerfilId1]);
+GO
+
+-- Creating foreign key on [UsuarioId] in table 'Ventas'
+ALTER TABLE [dbo].[Ventas]
+ADD CONSTRAINT [FK_UsuarioVentas]
+    FOREIGN KEY ([UsuarioId])
+    REFERENCES [dbo].[Usuarios]
+        ([Id])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_UsuarioVentas'
+CREATE INDEX [IX_FK_UsuarioVentas]
+ON [dbo].[Ventas]
+    ([UsuarioId]);
+GO
+
+-- Creating foreign key on [ArticulosId] in table 'Detalle_ventas'
+ALTER TABLE [dbo].[Detalle_ventas]
+ADD CONSTRAINT [FK_ArticulosDetalle_ventas]
+    FOREIGN KEY ([ArticulosId])
+    REFERENCES [dbo].[Articulos]
+        ([Id])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_ArticulosDetalle_ventas'
+CREATE INDEX [IX_FK_ArticulosDetalle_ventas]
+ON [dbo].[Detalle_ventas]
+    ([ArticulosId]);
+GO
+
+-- Creating foreign key on [VentasId] in table 'Detalle_ventas'
+ALTER TABLE [dbo].[Detalle_ventas]
+ADD CONSTRAINT [FK_VentasDetalle_ventas]
+    FOREIGN KEY ([VentasId])
+    REFERENCES [dbo].[Ventas]
+        ([Id])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_VentasDetalle_ventas'
+CREATE INDEX [IX_FK_VentasDetalle_ventas]
+ON [dbo].[Detalle_ventas]
+    ([VentasId]);
 GO
 
 -- --------------------------------------------------

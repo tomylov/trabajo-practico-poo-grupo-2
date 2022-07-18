@@ -16,8 +16,10 @@ namespace Modelo
     {
         public int Id { get; set; }
         public string cantidad { get; set; }
+        public int ArticulosId { get; set; }
+        public int VentasId { get; set; }
     
-        public virtual Ventas Ventas { get; set; }
         public virtual Articulos Articulos { get; set; }
+        public virtual Ventas Ventas { get; set; }
     }
 }

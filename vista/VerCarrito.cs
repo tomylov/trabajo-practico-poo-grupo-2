@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace vista
 {
-    public partial class GestionarUsuarios : Form
+    public partial class VerCarrito : Form
     {
-        public GestionarUsuarios()
+        public VerCarrito()
         {
             InitializeComponent();
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void btnmodificar_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

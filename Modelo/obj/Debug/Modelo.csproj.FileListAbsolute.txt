@@ -70,3 +70,15 @@ C:\Users\PC\Desktop\asd\trabajo-practico-poo-grupo-2\Modelo\obj\Debug\Modelo.csp
 C:\Users\PC\Desktop\asd\trabajo-practico-poo-grupo-2\Modelo\obj\Debug\Modelo.csproj.CopyComplete
 C:\Users\PC\Desktop\asd\trabajo-practico-poo-grupo-2\Modelo\obj\Debug\Modelo.dll
 C:\Users\PC\Desktop\asd\trabajo-practico-poo-grupo-2\Modelo\obj\Debug\Modelo.pdb
+E:\Users\alvar\Desktop\POO\TP Actual\trabajo-practico-poo-grupo-2\Modelo\bin\Debug\Modelo.dll.config
+E:\Users\alvar\Desktop\POO\TP Actual\trabajo-practico-poo-grupo-2\Modelo\bin\Debug\Modelo.dll
+E:\Users\alvar\Desktop\POO\TP Actual\trabajo-practico-poo-grupo-2\Modelo\bin\Debug\Modelo.pdb
+E:\Users\alvar\Desktop\POO\TP Actual\trabajo-practico-poo-grupo-2\Modelo\bin\Debug\EntityFramework.dll
+E:\Users\alvar\Desktop\POO\TP Actual\trabajo-practico-poo-grupo-2\Modelo\bin\Debug\EntityFramework.SqlServer.dll
+E:\Users\alvar\Desktop\POO\TP Actual\trabajo-practico-poo-grupo-2\Modelo\bin\Debug\EntityFramework.xml
+E:\Users\alvar\Desktop\POO\TP Actual\trabajo-practico-poo-grupo-2\Modelo\bin\Debug\EntityFramework.SqlServer.xml
+E:\Users\alvar\Desktop\POO\TP Actual\trabajo-practico-poo-grupo-2\Modelo\obj\Debug\Modelo.csproj.AssemblyReference.cache
+E:\Users\alvar\Desktop\POO\TP Actual\trabajo-practico-poo-grupo-2\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
+E:\Users\alvar\Desktop\POO\TP Actual\trabajo-practico-poo-grupo-2\Modelo\obj\Debug\Modelo.csproj.CopyComplete
+E:\Users\alvar\Desktop\POO\TP Actual\trabajo-practico-poo-grupo-2\Modelo\obj\Debug\Modelo.dll
+E:\Users\alvar\Desktop\POO\TP Actual\trabajo-practico-poo-grupo-2\Modelo\obj\Debug\Modelo.pdb

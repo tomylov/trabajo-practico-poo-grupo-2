@@ -41,7 +41,7 @@
             this.txtpass.Location = new System.Drawing.Point(154, 92);
             this.txtpass.Name = "txtpass";
             this.txtpass.Size = new System.Drawing.Size(100, 20);
-            this.txtpass.TabIndex = 0;
+            this.txtpass.TabIndex = 1;
             this.txtpass.UseSystemPasswordChar = true;
             // 
             // txtuser
@@ -49,7 +49,7 @@
             this.txtuser.Location = new System.Drawing.Point(154, 41);
             this.txtuser.Name = "txtuser";
             this.txtuser.Size = new System.Drawing.Size(100, 20);
-            this.txtuser.TabIndex = 1;
+            this.txtuser.TabIndex = 0;
             // 
             // btnini
             // 

@@ -47,6 +47,8 @@
         <MappingFragment StoreEntitySet="Ventas">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="UsuarioId" ColumnName="UsuarioId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -55,6 +57,8 @@
         <MappingFragment StoreEntitySet="Detalle_ventas">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+          <ScalarProperty Name="ArticulosId" ColumnName="ArticulosId" />
+          <ScalarProperty Name="VentasId" ColumnName="VentasId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -64,6 +68,7 @@
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="nombre" ColumnName="nombre" />
           <ScalarProperty Name="stock" ColumnName="stock" />
+          <ScalarProperty Name="Precio" ColumnName="Precio" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -73,30 +78,6 @@
       </EndProperty>
       <EndProperty Name="permiso">
         <ScalarProperty Name="Id" ColumnName="permiso_Id" />
-      </EndProperty>
-    </AssociationSetMapping>
-    <AssociationSetMapping Name="VentasUsuario" TypeName="Contexto.VentasUsuario" StoreEntitySet="Ventas">
-      <EndProperty Name="Usuario">
-        <ScalarProperty Name="Id" ColumnName="Usuario_Id" />
-      </EndProperty>
-      <EndProperty Name="Ventas">
-        <ScalarProperty Name="Id" ColumnName="Id" />
-      </EndProperty>
-    </AssociationSetMapping>
-    <AssociationSetMapping Name="VentasDetalle_ventas" TypeName="Contexto.VentasDetalle_ventas" StoreEntitySet="Detalle_ventas">
-      <EndProperty Name="Ventas">
-        <ScalarProperty Name="Id" ColumnName="Ventas_Id" />
-      </EndProperty>
-      <EndProperty Name="Detalle_ventas">
-        <ScalarProperty Name="Id" ColumnName="Id" />
-      </EndProperty>
-    </AssociationSetMapping>
-    <AssociationSetMapping Name="ArticulosDetalle_ventas" TypeName="Contexto.ArticulosDetalle_ventas" StoreEntitySet="Detalle_ventas">
-      <EndProperty Name="Articulos">
-        <ScalarProperty Name="Id" ColumnName="Articulos_Id" />
-      </EndProperty>
-      <EndProperty Name="Detalle_ventas">
-        <ScalarProperty Name="Id" ColumnName="Id" />
       </EndProperty>
     </AssociationSetMapping>
   </EntityContainerMapping>

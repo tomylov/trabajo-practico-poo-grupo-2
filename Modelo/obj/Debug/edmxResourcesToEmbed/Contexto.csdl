@@ -12,18 +12,6 @@
     <EntitySet Name="Ventas" EntityType="Contexto.Ventas" />
     <EntitySet Name="Detalle_ventas" EntityType="Contexto.Detalle_ventas" />
     <EntitySet Name="Articulos" EntityType="Contexto.Articulos" />
-    <AssociationSet Name="VentasUsuario" Association="Contexto.VentasUsuario">
-      <End Role="Ventas" EntitySet="Ventas" />
-      <End Role="Usuario" EntitySet="Usuarios" />
-    </AssociationSet>
-    <AssociationSet Name="VentasDetalle_ventas" Association="Contexto.VentasDetalle_ventas">
-      <End Role="Ventas" EntitySet="Ventas" />
-      <End Role="Detalle_ventas" EntitySet="Detalle_ventas" />
-    </AssociationSet>
-    <AssociationSet Name="ArticulosDetalle_ventas" Association="Contexto.ArticulosDetalle_ventas">
-      <End Role="Articulos" EntitySet="Articulos" />
-      <End Role="Detalle_ventas" EntitySet="Detalle_ventas" />
-    </AssociationSet>
     <AssociationSet Name="PerfilUsuario" Association="Contexto.PerfilUsuario">
       <End Role="Perfil" EntitySet="Perfiles" />
       <End Role="Usuario" EntitySet="Usuarios" />
@@ -31,6 +19,18 @@
     <AssociationSet Name="PerfilFormulario" Association="Contexto.PerfilFormulario">
       <End Role="Perfil" EntitySet="Perfiles" />
       <End Role="Formulario" EntitySet="Formulario" />
+    </AssociationSet>
+    <AssociationSet Name="UsuarioVentas" Association="Contexto.UsuarioVentas">
+      <End Role="Usuario" EntitySet="Usuarios" />
+      <End Role="Ventas" EntitySet="Ventas" />
+    </AssociationSet>
+    <AssociationSet Name="ArticulosDetalle_ventas" Association="Contexto.ArticulosDetalle_ventas">
+      <End Role="Articulos" EntitySet="Articulos" />
+      <End Role="Detalle_ventas" EntitySet="Detalle_ventas" />
+    </AssociationSet>
+    <AssociationSet Name="VentasDetalle_ventas" Association="Contexto.VentasDetalle_ventas">
+      <End Role="Ventas" EntitySet="Ventas" />
+      <End Role="Detalle_ventas" EntitySet="Detalle_ventas" />
     </AssociationSet>
   </EntityContainer>
   <EntityType Name="Usuario">
@@ -43,9 +43,9 @@
     <Property Name="Contraseña" Type="String" Nullable="false" />
     <Property Name="Nombre" Type="String" Nullable="false" />
     <Property Name="Telefono" Type="String" Nullable="false" />
-    <NavigationProperty Name="Ventas" Relationship="Contexto.VentasUsuario" FromRole="Usuario" ToRole="Ventas" />
     <NavigationProperty Name="Perfil" Relationship="Contexto.PerfilUsuario" FromRole="Usuario" ToRole="Perfil" />
     <Property Name="PerfilId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Ventas" Relationship="Contexto.UsuarioVentas" FromRole="Usuario" ToRole="Ventas" />
   </EntityType>
   <EntityType Name="Formulario">
     <Key>
@@ -87,7 +87,9 @@
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="fecha" Type="String" Nullable="false" />
-    <NavigationProperty Name="Usuario" Relationship="Contexto.VentasUsuario" FromRole="Ventas" ToRole="Usuario" />
+    <Property Name="estado" Type="String" Nullable="false" />
+    <NavigationProperty Name="Usuario" Relationship="Contexto.UsuarioVentas" FromRole="Ventas" ToRole="Usuario" />
+    <Property Name="UsuarioId" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Detalle_ventas" Relationship="Contexto.VentasDetalle_ventas" FromRole="Ventas" ToRole="Detalle_ventas" />
   </EntityType>
   <EntityType Name="Detalle_ventas">
@@ -96,8 +98,10 @@
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="cantidad" Type="String" Nullable="false" />
-    <NavigationProperty Name="Ventas" Relationship="Contexto.VentasDetalle_ventas" FromRole="Detalle_ventas" ToRole="Ventas" />
     <NavigationProperty Name="Articulos" Relationship="Contexto.ArticulosDetalle_ventas" FromRole="Detalle_ventas" ToRole="Articulos" />
+    <Property Name="ArticulosId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Ventas" Relationship="Contexto.VentasDetalle_ventas" FromRole="Detalle_ventas" ToRole="Ventas" />
+    <Property Name="VentasId" Type="Int32" Nullable="false" />
   </EntityType>
   <EntityType Name="Articulos">
     <Key>
@@ -106,20 +110,9 @@
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="nombre" Type="String" Nullable="false" />
     <Property Name="stock" Type="String" Nullable="false" />
+    <Property Name="Precio" Type="String" Nullable="false" />
     <NavigationProperty Name="Detalle_ventas" Relationship="Contexto.ArticulosDetalle_ventas" FromRole="Articulos" ToRole="Detalle_ventas" />
   </EntityType>
-  <Association Name="VentasUsuario">
-    <End Type="Contexto.Ventas" Role="Ventas" Multiplicity="*" />
-    <End Type="Contexto.Usuario" Role="Usuario" Multiplicity="1" />
-  </Association>
-  <Association Name="VentasDetalle_ventas">
-    <End Type="Contexto.Ventas" Role="Ventas" Multiplicity="1" />
-    <End Type="Contexto.Detalle_ventas" Role="Detalle_ventas" Multiplicity="*" />
-  </Association>
-  <Association Name="ArticulosDetalle_ventas">
-    <End Type="Contexto.Articulos" Role="Articulos" Multiplicity="1" />
-    <End Type="Contexto.Detalle_ventas" Role="Detalle_ventas" Multiplicity="*" />
-  </Association>
   <Association Name="PerfilUsuario">
     <End Type="Contexto.Perfil" Role="Perfil" Multiplicity="1" />
     <End Type="Contexto.Usuario" Role="Usuario" Multiplicity="*" />
@@ -141,6 +134,42 @@
       </Principal>
       <Dependent Role="Formulario">
         <PropertyRef Name="PerfilId1" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="UsuarioVentas">
+    <End Type="Contexto.Usuario" Role="Usuario" Multiplicity="1" />
+    <End Type="Contexto.Ventas" Role="Ventas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Ventas">
+        <PropertyRef Name="UsuarioId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ArticulosDetalle_ventas">
+    <End Type="Contexto.Articulos" Role="Articulos" Multiplicity="1" />
+    <End Type="Contexto.Detalle_ventas" Role="Detalle_ventas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Articulos">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Detalle_ventas">
+        <PropertyRef Name="ArticulosId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="VentasDetalle_ventas">
+    <End Type="Contexto.Ventas" Role="Ventas" Multiplicity="1" />
+    <End Type="Contexto.Detalle_ventas" Role="Detalle_ventas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ventas">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Detalle_ventas">
+        <PropertyRef Name="VentasId" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
