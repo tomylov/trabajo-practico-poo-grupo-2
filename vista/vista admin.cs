@@ -25,8 +25,6 @@ namespace vista
 
         private void btnart_Click(object sender, EventArgs e)
         {
-            UsuarioAdmin frm = new UsuarioAdmin();
-            frm.Show();
         }
 
         private void btnprov_Click(object sender, EventArgs e)

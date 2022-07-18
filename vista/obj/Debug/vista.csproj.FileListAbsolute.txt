@@ -199,7 +199,6 @@ E:\Users\alvar\Desktop\POO\TP Actual\trabajo-practico-poo-grupo-2\vista\bin\Debu
 E:\Users\alvar\Desktop\POO\TP Actual\trabajo-practico-poo-grupo-2\vista\bin\Debug\EntityFramework.SqlServer.xml
 E:\Users\alvar\Desktop\POO\TP Actual\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.csproj.AssemblyReference.cache
 E:\Users\alvar\Desktop\POO\TP Actual\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.AgregarCarrito.resources
-E:\Users\alvar\Desktop\POO\TP Actual\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.UsuarioAdmin.resources
 E:\Users\alvar\Desktop\POO\TP Actual\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.GestionarProveedores.resources
 E:\Users\alvar\Desktop\POO\TP Actual\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.GestionarUsuarios.resources
 E:\Users\alvar\Desktop\POO\TP Actual\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.Form1.resources
@@ -213,3 +212,4 @@ E:\Users\alvar\Desktop\POO\TP Actual\trabajo-practico-poo-grupo-2\vista\obj\Debu
 E:\Users\alvar\Desktop\POO\TP Actual\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.exe
 E:\Users\alvar\Desktop\POO\TP Actual\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.pdb
 E:\Users\alvar\Desktop\POO\TP Actual\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.VistaCliente.resources
+E:\Users\alvar\Desktop\POO\TP Actual\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.Articulos.resources

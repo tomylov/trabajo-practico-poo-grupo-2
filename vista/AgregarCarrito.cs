@@ -26,6 +26,12 @@ namespace vista
         {
         }
 
+        public static int cont_fila = 0;
+
+        double importe = 0;
+
+        double subtotal;
+
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             string CMD = string.Format("select max(Id) from Ventas ");
@@ -36,8 +42,23 @@ namespace vista
             detalle.ArticulosId = Convert.ToInt32(txtCod.Text);
             detalle.VentasId = va;
             Controladora.Controladora_Detalle.obtener_instancia().Agregar_Detalle(detalle);
-            String var = "where VentasId = "+ va.ToString();
-            dataGridView1.DataSource = sql_consulta.LlenarDataGV("Detalle_Ventas ",var).Tables[0];
+            CMD = string.Format("Select * from Articulos where id= " + txtCod.Text);
+            ds = Controladora.sql_consulta.Ejecutar(CMD);
+            string precio = ds.Tables[0].Rows[0]["Precio"].ToString().Trim();
+            
+                importe = Convert.ToDouble(txtCant.Text) * (Convert.ToDouble(precio));
+                dataGridView1.Rows.Add(txtCant.Text, txtDesc.Text, precio, txtCant.Text, importe);
+
+                subtotal += importe;
+                txtSub.Text = subtotal.ToString();
+             
+        }
+
+        private void btnArt_Click_1(object sender, EventArgs e)
+        {
+            Articulos frm = new Articulos();
+            frm.Show();
+
         }
     }
 }
