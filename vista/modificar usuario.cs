@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace vista
 {
-    public partial class VerCarrito : Form
+    public partial class modificar_usuario : Form
     {
-        public VerCarrito()
+        public modificar_usuario()
         {
             InitializeComponent();
-        }
-
-        private void VerCarrito_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

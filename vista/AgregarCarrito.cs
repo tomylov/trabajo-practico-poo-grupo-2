@@ -46,11 +46,11 @@ namespace vista
             ds = Controladora.sql_consulta.Ejecutar(CMD);
             string precio = ds.Tables[0].Rows[0]["Precio"].ToString().Trim();
             
-                importe = Convert.ToDouble(txtCant.Text) * (Convert.ToDouble(precio));
-                dataGridView1.Rows.Add(txtCant.Text, txtDesc.Text, precio, txtCant.Text, importe);
+            importe = Convert.ToDouble(txtCant.Text) * (Convert.ToDouble(precio));
+            dataGridView1.Rows.Add(txtCant.Text, txtDesc.Text, precio, txtCant.Text, importe);
 
-                subtotal += importe;
-                txtSub.Text = subtotal.ToString();
+            subtotal += importe;
+            txtSub.Text = subtotal.ToString();
              
         }
 
@@ -59,6 +59,32 @@ namespace vista
             Articulos frm = new Articulos();
             frm.Show();
 
+        }
+
+        private void txtCod_TextChanged(object sender, EventArgs e)
+        {
+            bool valido;
+            try 
+            {
+                string CMD = string.Format("Select * from Articulos where id= " + txtCod.Text);
+                DataSet ds = Controladora.sql_consulta.Ejecutar(CMD);
+                txtDesc.Text = ds.Tables[0].Rows[0]["nombre"].ToString();
+                valido = true;
+            }
+            catch (Exception)
+            {
+                txtDesc.Text = "no existe el codigo seleccionado";
+                valido = false;
+                
+            }
+            if (valido)
+            {
+                btnAgregar.Enabled = true;
+            }
+            else
+            {
+                btnAgregar.Enabled = false;
+            }
         }
     }
 }

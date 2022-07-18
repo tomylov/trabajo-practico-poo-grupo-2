@@ -12,9 +12,11 @@ namespace vista
 {
     public partial class Registro : Form
     {
-        public Registro()
+        int id=0;
+        public Registro(int valor)
         {
             InitializeComponent();
+            this.id = valor;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -48,7 +50,7 @@ namespace vista
                 usuario.Email = txtmail.Text;             
                 usuario.Contraseña = txtpass.Text;
                 usuario.Telefono = txtphone.Text;
-                usuario.PerfilId = 2;
+                usuario.PerfilId = id;
                 Controladora.Controladora_usuarios.obtener_instancia().Agregar_Usuario(usuario);
                 MessageBox.Show("usuario creado con exito");
                 this.Close();

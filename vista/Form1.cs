@@ -19,15 +19,16 @@ namespace vista
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {            
-            login frm = new login();
+        {
+            GestionarUsuarios frm = new GestionarUsuarios();
+            //login frm = new login();
             frm.Show();
 
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Registro frm = new Registro();
+            Registro frm = new Registro(2);
             frm.Show();
         }
 

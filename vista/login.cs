@@ -12,17 +12,19 @@ namespace vista
 {
     public partial class login : Form
     {
+        
         public login()
         {
             InitializeComponent();
         }
+        int idperfil;
 
         private void btnclose_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        public static bool valilog(string user, string pass)
+        public bool valilog(string user, string pass)
         {
             string Contraseña = "";
             bool validador= false;
@@ -31,6 +33,7 @@ namespace vista
                 string CMD = string.Format("select * from Usuarios where Email='{0}'", user);
                 DataSet ds = Controladora.sql_consulta.Ejecutar(CMD);
                 Contraseña = ds.Tables[0].Rows[0]["Contraseña"].ToString().Trim();
+                idperfil= Convert.ToInt32(ds.Tables[0].Rows[0]["PerfilId"]);
             }
             catch (Exception)
             {
@@ -57,9 +60,24 @@ namespace vista
 
             if (valilog(user, passw))
             {
-                VistaCliente frm = new VistaCliente(user);
-                frm.Show();
-                //MessageBox.Show("ingreso exitoso", "validador", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                switch (idperfil)
+                {
+                    case 1:
+                        GestionarUsuarios adm = new GestionarUsuarios();
+                        adm.Show();
+
+                        break;
+                    case 2:
+                        VistaCliente frm = new VistaCliente(user);
+                        frm.Show();
+                        break;
+                    case 3:
+                        GestionarVentas vend = new GestionarVentas();
+                        vend.Show();
+                        break;
+                }
+                
+               
             }
             
         }

@@ -91,16 +91,17 @@ namespace vista
             // 
             // txtCod
             // 
-            this.txtCod.Location = new System.Drawing.Point(12, 73);
+            this.txtCod.Location = new System.Drawing.Point(12, 74);
             this.txtCod.Name = "txtCod";
             this.txtCod.Size = new System.Drawing.Size(100, 20);
             this.txtCod.TabIndex = 1;
+            this.txtCod.TextChanged += new System.EventHandler(this.txtCod_TextChanged);
             // 
             // txtDesc
             // 
-            this.txtDesc.Location = new System.Drawing.Point(133, 73);
+            this.txtDesc.Location = new System.Drawing.Point(118, 73);
             this.txtDesc.Name = "txtDesc";
-            this.txtDesc.Size = new System.Drawing.Size(100, 20);
+            this.txtDesc.Size = new System.Drawing.Size(136, 20);
             this.txtDesc.TabIndex = 2;
             // 
             // txtCant

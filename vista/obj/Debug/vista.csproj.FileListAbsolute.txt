@@ -213,3 +213,33 @@ E:\Users\alvar\Desktop\POO\TP Actual\trabajo-practico-poo-grupo-2\vista\obj\Debu
 E:\Users\alvar\Desktop\POO\TP Actual\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.pdb
 E:\Users\alvar\Desktop\POO\TP Actual\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.VistaCliente.resources
 E:\Users\alvar\Desktop\POO\TP Actual\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.Articulos.resources
+C:\Users\PC\Desktop\poo\trabajo-practico-poo-grupo-2\vista\bin\Debug\vista.exe.config
+C:\Users\PC\Desktop\poo\trabajo-practico-poo-grupo-2\vista\bin\Debug\vista.exe
+C:\Users\PC\Desktop\poo\trabajo-practico-poo-grupo-2\vista\bin\Debug\vista.pdb
+C:\Users\PC\Desktop\poo\trabajo-practico-poo-grupo-2\vista\bin\Debug\Controladora.dll
+C:\Users\PC\Desktop\poo\trabajo-practico-poo-grupo-2\vista\bin\Debug\EntityFramework.dll
+C:\Users\PC\Desktop\poo\trabajo-practico-poo-grupo-2\vista\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\PC\Desktop\poo\trabajo-practico-poo-grupo-2\vista\bin\Debug\Modelo.dll
+C:\Users\PC\Desktop\poo\trabajo-practico-poo-grupo-2\vista\bin\Debug\Controladora.pdb
+C:\Users\PC\Desktop\poo\trabajo-practico-poo-grupo-2\vista\bin\Debug\Controladora.dll.config
+C:\Users\PC\Desktop\poo\trabajo-practico-poo-grupo-2\vista\bin\Debug\Modelo.pdb
+C:\Users\PC\Desktop\poo\trabajo-practico-poo-grupo-2\vista\bin\Debug\Modelo.dll.config
+C:\Users\PC\Desktop\poo\trabajo-practico-poo-grupo-2\vista\bin\Debug\EntityFramework.xml
+C:\Users\PC\Desktop\poo\trabajo-practico-poo-grupo-2\vista\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\PC\Desktop\poo\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.csproj.AssemblyReference.cache
+C:\Users\PC\Desktop\poo\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.AgregarCarrito.resources
+C:\Users\PC\Desktop\poo\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.Articulos.resources
+C:\Users\PC\Desktop\poo\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.GestionarProveedores.resources
+C:\Users\PC\Desktop\poo\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.GestionarUsuarios.resources
+C:\Users\PC\Desktop\poo\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.Form1.resources
+C:\Users\PC\Desktop\poo\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.login.resources
+C:\Users\PC\Desktop\poo\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.Properties.Resources.resources
+C:\Users\PC\Desktop\poo\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.Registro.resources
+C:\Users\PC\Desktop\poo\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.VerCarrito.resources
+C:\Users\PC\Desktop\poo\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.vista_admin.resources
+C:\Users\PC\Desktop\poo\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.VistaCliente.resources
+C:\Users\PC\Desktop\poo\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.csproj.GenerateResource.cache
+C:\Users\PC\Desktop\poo\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.csproj.CoreCompileInputs.cache
+C:\Users\PC\Desktop\poo\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.csproj.CopyComplete
+C:\Users\PC\Desktop\poo\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.exe
+C:\Users\PC\Desktop\poo\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.pdb
