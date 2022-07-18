@@ -16,6 +16,7 @@ namespace vista
         public AgregarCarrito()
         {
             InitializeComponent();
+            btnAgregar.Enabled = false;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -32,25 +33,62 @@ namespace vista
 
         double subtotal;
 
+        public bool valinumero()
+        {
+            if(txtCant.Text.All(Char.IsDigit) && txtCant.Text!="")
+            {
+                return true;
+            }
+            else
+            {
+                MessageBox.Show("la cantidad debe ser un numero");
+                return false;
+            }
+        }
+
+        public bool cantidad()
+        {
+            string cmd = string.Format("Select * from Articulos where Id ="+txtCod.Text);
+            DataSet ds = Controladora.sql_consulta.Ejecutar(cmd);
+            int stock = Convert.ToInt32(ds.Tables[0].Rows[0]["stock"]);
+            string id = ds.Tables[0].Rows[0]["Id"].ToString();
+            if (stock >= Convert.ToInt32(txtCant.Text))
+            {
+                //update de los artiuclos dentro de la bd
+                int nuevoS = stock - Convert.ToInt32(txtCant.Text);
+                cmd = string.Format("update Articulos set stock="+nuevoS+"where Id= "+id);
+                Controladora.sql_consulta.Ejecutar(cmd);
+                return true;
+            } else
+            {
+                MessageBox.Show("se ha excedido de la cantidad disponible");
+                return false;
+            }
+        }
+
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            string CMD = string.Format("select max(Id) from Ventas ");
-            DataSet ds = Controladora.sql_consulta.Ejecutar(CMD);
-            int va = Convert.ToInt32(ds.Tables[0].Rows[0][0]);
-            Modelo.Detalle_ventas detalle = new Modelo.Detalle_ventas();
-            detalle.cantidad = txtCant.Text;
-            detalle.ArticulosId = Convert.ToInt32(txtCod.Text);
-            detalle.VentasId = va;
-            Controladora.Controladora_Detalle.obtener_instancia().Agregar_Detalle(detalle);
-            CMD = string.Format("Select * from Articulos where id= " + txtCod.Text);
-            ds = Controladora.sql_consulta.Ejecutar(CMD);
-            string precio = ds.Tables[0].Rows[0]["Precio"].ToString().Trim();
-            
-            importe = Convert.ToDouble(txtCant.Text) * (Convert.ToDouble(precio));
-            dataGridView1.Rows.Add(txtCant.Text, txtDesc.Text, precio, txtCant.Text, importe);
+            if (valinumero()&&cantidad())
+            {
+                string CMD = string.Format("select max(Id) from Ventas ");
+                DataSet ds = Controladora.sql_consulta.Ejecutar(CMD);
+                int va = Convert.ToInt32(ds.Tables[0].Rows[0][0]);
+                Modelo.Detalle_ventas detalle = new Modelo.Detalle_ventas();
+                detalle.cantidad = txtCant.Text;
+                detalle.ArticulosId = Convert.ToInt32(txtCod.Text);
+                detalle.VentasId = va;
+                Controladora.Controladora_Detalle.obtener_instancia().Agregar_Detalle(detalle);
+                CMD = string.Format("Select * from Articulos where id= " + txtCod.Text);
+                ds = Controladora.sql_consulta.Ejecutar(CMD);
+                string precio = ds.Tables[0].Rows[0]["Precio"].ToString().Trim();
 
-            subtotal += importe;
-            txtSub.Text = subtotal.ToString();
+                
+                importe = Convert.ToDouble(txtCant.Text) * (Convert.ToDouble(precio));
+                dataGridView1.Rows.Add(txtCod.Text, txtDesc.Text, precio, txtCant.Text, importe);
+
+                subtotal += importe;
+                txtSub.Text = subtotal.ToString();
+            }
              
         }
 

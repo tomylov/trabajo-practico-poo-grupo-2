@@ -243,3 +243,4 @@ C:\Users\PC\Desktop\poo\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.cspro
 C:\Users\PC\Desktop\poo\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.csproj.CopyComplete
 C:\Users\PC\Desktop\poo\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.exe
 C:\Users\PC\Desktop\poo\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.pdb
+C:\Users\PC\Desktop\poo\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.modificar_usuario.resources

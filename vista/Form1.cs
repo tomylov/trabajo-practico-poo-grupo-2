@@ -19,9 +19,8 @@ namespace vista
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {
-            GestionarUsuarios frm = new GestionarUsuarios();
-            //login frm = new login();
+        {            
+            login frm = new login();
             frm.Show();
 
         }

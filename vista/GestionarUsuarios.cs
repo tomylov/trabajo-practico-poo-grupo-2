@@ -27,22 +27,26 @@ namespace vista
 
         private void btnmodificar_Click(object sender, EventArgs e)
         {
-
+            if (valifila())
+            {
+                int id = Convert.ToInt32(dataGridView1.Rows[fila].Cells[0].Value);
+                modificar_usuario frm = new modificar_usuario(id);
+                frm.Show();
+            }
+            
         }
 
         private void btnadd_Click(object sender, EventArgs e)
         {
             Registro frm = new Registro(3);
-            frm.Show();
-            string CMD = string.Format("select * from Usuarios where PerfilId=3");
-            dataGridView1.DataSource = Controladora.sql_consulta.Ejecutar(CMD).Tables[0];
+            frm.Show();            
         }
 
         public bool valifila()
         {
             if (fila == -1)
             {
-                MessageBox.Show("debe seleccionar un usuario para eliminar");
+                MessageBox.Show("debe seleccionar un usuario");
                 return false;
             }
             else
@@ -65,6 +69,17 @@ namespace vista
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             fila = e.RowIndex;
+        }
+
+        private void GestionarUsuarios_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnactualizar_Click(object sender, EventArgs e)
+        {
+            string CMD = string.Format("select * from Usuarios where PerfilId=3");
+            dataGridView1.DataSource = Controladora.sql_consulta.Ejecutar(CMD).Tables[0];
         }
     }
 }
