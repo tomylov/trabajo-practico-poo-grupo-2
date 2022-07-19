@@ -275,3 +275,5 @@ E:\Users\alvar\Desktop\POO\Tp Acutalizado x2\trabajo-practico-poo-grupo-2\vista\
 E:\Users\alvar\Desktop\POO\Tp Acutalizado x2\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.csproj.CopyComplete
 E:\Users\alvar\Desktop\POO\Tp Acutalizado x2\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.exe
 E:\Users\alvar\Desktop\POO\Tp Acutalizado x2\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.pdb
+C:\Users\PC\Desktop\poo\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.GestionarVentas.resources
+C:\Users\PC\Desktop\poo\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.ver_detalle_venta.resources

@@ -1,7 +1,7 @@
 ﻿
 namespace vista
 {
-    partial class GestionarVentas
+    partial class ver_detalle_venta
     {
         /// <summary>
         /// Required designer variable.
@@ -30,39 +30,26 @@ namespace vista
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnvta = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(41, 32);
+            this.dataGridView1.Location = new System.Drawing.Point(53, 34);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(673, 273);
+            this.dataGridView1.Size = new System.Drawing.Size(657, 347);
             this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
-            // btnvta
-            // 
-            this.btnvta.Location = new System.Drawing.Point(68, 354);
-            this.btnvta.Name = "btnvta";
-            this.btnvta.Size = new System.Drawing.Size(115, 38);
-            this.btnvta.TabIndex = 1;
-            this.btnvta.Text = "ver venta";
-            this.btnvta.UseVisualStyleBackColor = true;
-            this.btnvta.Click += new System.EventHandler(this.btnvta_Click);
-            // 
-            // GestionarVentas
+            // ver_detalle_venta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnvta);
+            this.ClientSize = new System.Drawing.Size(787, 437);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "GestionarVentas";
-            this.Text = "GestionarVentas";
-            this.Load += new System.EventHandler(this.GestionarVentas_Load);
+            this.Name = "ver_detalle_venta";
+            this.Text = "ver_detalle_venta";
+            this.Load += new System.EventHandler(this.ver_detalle_venta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
@@ -71,6 +58,5 @@ namespace vista
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button btnvta;
     }
 }

@@ -25,8 +25,7 @@ namespace vista
             DataSet ds = Controladora.sql_consulta.Ejecutar(CMD);
             int va = Convert.ToInt32(ds.Tables[0].Rows[0]["Id"]);
             Modelo.Ventas ventas = new Modelo.Ventas();
-            ventas.fecha = DateTime.Today.ToString();
-            ventas.estado = "1";
+            ventas.fecha = DateTime.Today.ToString();            
             ventas.UsuarioId = va;
             Controladora.Controladora_ventas.obtener_instancia().Agregar_Ventas(ventas);
             AgregarCarrito frm = new AgregarCarrito();

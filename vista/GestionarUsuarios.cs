@@ -42,7 +42,7 @@ namespace vista
             frm.Show();            
         }
 
-        public bool valifila()
+        private bool valifila()
         {
             if (fila == -1)
             {

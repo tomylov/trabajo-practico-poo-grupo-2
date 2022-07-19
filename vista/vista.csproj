@@ -118,6 +118,12 @@
     <Compile Include="VerCarrito.Designer.cs">
       <DependentUpon>VerCarrito.cs</DependentUpon>
     </Compile>
+    <Compile Include="ver_detalle_venta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ver_detalle_venta.Designer.cs">
+      <DependentUpon>ver_detalle_venta.cs</DependentUpon>
+    </Compile>
     <Compile Include="vista admin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +151,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GestionarVentas.resx">
+      <DependentUpon>GestionarVentas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
@@ -165,6 +174,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VerCarrito.resx">
       <DependentUpon>VerCarrito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ver_detalle_venta.resx">
+      <DependentUpon>ver_detalle_venta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vista admin.resx">
       <DependentUpon>vista admin.cs</DependentUpon>
