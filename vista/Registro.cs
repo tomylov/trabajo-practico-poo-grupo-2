@@ -157,6 +157,14 @@ namespace vista
                 usuario.Telefono = txtphone.Text;
                 usuario.PerfilId = id;
                 Controladora.Controladora_usuarios.obtener_instancia().Agregar_Usuario(usuario);
+
+                string cmd =string.Format("select max(Id) FROM Usuarios");
+                DataSet DS= Controladora.sql_consulta.Ejecutar(cmd);
+                id = Convert.ToInt32(DS.Tables[0].Rows[0][0]);
+
+                cmd = string.Format("update Usuarios set Contraseña =ENCRYPTBYPASSPHRASE('contraseña','{0}') where Id="+id,txtpass.Text);
+                Controladora.sql_consulta.Ejecutar(cmd);
+
                 MessageBox.Show("usuario creado con exito");
                 this.Close();
             }

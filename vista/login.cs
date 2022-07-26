@@ -30,9 +30,9 @@ namespace vista
             bool validador= false;
             try
             {
-                string CMD = string.Format("select * from Usuarios where Email='{0}'", user);
+                string CMD = string.Format("select CONVERT(varchar(max),dECRYPTBYPASSPHRASE('contraseña',Contraseña)),PerfilId from Usuarios where Email='{0}'", user);
                 DataSet ds = Controladora.sql_consulta.Ejecutar(CMD);
-                Contraseña = ds.Tables[0].Rows[0]["Contraseña"].ToString().Trim();
+                Contraseña = ds.Tables[0].Rows[0][0].ToString().Trim();
                 idperfil= Convert.ToInt32(ds.Tables[0].Rows[0]["PerfilId"]);
             }
             catch (Exception)

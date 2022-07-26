@@ -144,7 +144,6 @@ C:\Users\PC\Desktop\trabajo-practico-poo-grupo-2\vista\bin\Debug\Modelo.dll.conf
 C:\Users\PC\Desktop\trabajo-practico-poo-grupo-2\vista\bin\Debug\EntityFramework.xml
 C:\Users\PC\Desktop\trabajo-practico-poo-grupo-2\vista\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\PC\Desktop\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.csproj.AssemblyReference.cache
-C:\Users\PC\Desktop\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.UsuarioAdmin.resources
 C:\Users\PC\Desktop\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.GestionarProveedores.resources
 C:\Users\PC\Desktop\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.GestionarUsuarios.resources
 C:\Users\PC\Desktop\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.Form1.resources
@@ -310,3 +309,10 @@ E:\Users\alvar\Desktop\POO\POO Final V1\trabajo-practico-poo-grupo-2\vista\obj\D
 E:\Users\alvar\Desktop\POO\POO Final V1\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.csproj.CopyComplete
 E:\Users\alvar\Desktop\POO\POO Final V1\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.exe
 E:\Users\alvar\Desktop\POO\POO Final V1\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.pdb
+C:\Users\PC\Desktop\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.AgregarCarrito.resources
+C:\Users\PC\Desktop\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.Articulos.resources
+C:\Users\PC\Desktop\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.GestionarVentas.resources
+C:\Users\PC\Desktop\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.modificar_usuario.resources
+C:\Users\PC\Desktop\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.VerCarrito.resources
+C:\Users\PC\Desktop\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.ver_detalle_venta.resources
+C:\Users\PC\Desktop\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.VistaCliente.resources
