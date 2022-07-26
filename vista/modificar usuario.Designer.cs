@@ -41,15 +41,17 @@ namespace vista
             this.label4 = new System.Windows.Forms.Label();
             this.txtDNI = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtcontra2 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnmodificar
             // 
             this.btnmodificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnmodificar.Location = new System.Drawing.Point(62, 248);
+            this.btnmodificar.Location = new System.Drawing.Point(53, 276);
             this.btnmodificar.Name = "btnmodificar";
             this.btnmodificar.Size = new System.Drawing.Size(101, 41);
-            this.btnmodificar.TabIndex = 0;
+            this.btnmodificar.TabIndex = 8;
             this.btnmodificar.Text = "Modificar";
             this.btnmodificar.UseVisualStyleBackColor = true;
             this.btnmodificar.Click += new System.EventHandler(this.btnmodificar_Click);
@@ -57,10 +59,10 @@ namespace vista
             // btnsalir
             // 
             this.btnsalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnsalir.Location = new System.Drawing.Point(175, 248);
+            this.btnsalir.Location = new System.Drawing.Point(166, 276);
             this.btnsalir.Name = "btnsalir";
             this.btnsalir.Size = new System.Drawing.Size(101, 41);
-            this.btnsalir.TabIndex = 1;
+            this.btnsalir.TabIndex = 10;
             this.btnsalir.Text = "Salir";
             this.btnsalir.UseVisualStyleBackColor = true;
             this.btnsalir.Click += new System.EventHandler(this.btnsalir_Click);
@@ -135,27 +137,46 @@ namespace vista
             // 
             // txtDNI
             // 
-            this.txtDNI.Location = new System.Drawing.Point(148, 201);
+            this.txtDNI.Location = new System.Drawing.Point(148, 227);
             this.txtDNI.Name = "txtDNI";
             this.txtDNI.Size = new System.Drawing.Size(128, 20);
-            this.txtDNI.TabIndex = 10;
+            this.txtDNI.TabIndex = 7;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(92, 199);
+            this.label5.Location = new System.Drawing.Point(92, 225);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(45, 22);
             this.label5.TabIndex = 11;
             this.label5.Text = "DNI:";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(29, 201);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(108, 22);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Contraseña:";
+            // 
+            // txtcontra2
+            // 
+            this.txtcontra2.Location = new System.Drawing.Point(148, 201);
+            this.txtcontra2.Name = "txtcontra2";
+            this.txtcontra2.Size = new System.Drawing.Size(128, 20);
+            this.txtcontra2.TabIndex = 6;
+            // 
             // modificar_usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(330, 331);
+            this.ClientSize = new System.Drawing.Size(330, 347);
+            this.Controls.Add(this.txtcontra2);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtDNI);
             this.Controls.Add(this.label4);
@@ -170,6 +191,7 @@ namespace vista
             this.Controls.Add(this.btnmodificar);
             this.Name = "modificar_usuario";
             this.Text = "modificar_usuario";
+            this.Load += new System.EventHandler(this.modificar_usuario_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -189,5 +211,7 @@ namespace vista
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtDNI;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtcontra2;
     }
 }

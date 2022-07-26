@@ -14,9 +14,17 @@ namespace vista
     {
         public ver_detalle_venta(int valor)
         {
+            
             InitializeComponent();
-            string CMD = string.Format("select * from Detalle_ventas where VentasId = " + valor);
+            string CMD = string.Format("select Articulos.nombre,cantidad,ArticulosId from Detalle_ventas inner join Articulos on Articulos.Id = ArticulosId where VentasId=" + valor);
             dataGridView1.DataSource = Controladora.sql_consulta.Ejecutar(CMD).Tables[0];
+
+            CMD = string.Format("select Usuarios.Nombre,Usuarios.Email from Ventas inner join Usuarios on UsuarioId =Usuarios.Id where Ventas.Id="+valor);
+            DataSet ds =Controladora.sql_consulta.Ejecutar(CMD);
+            txtnombre.Text = ds.Tables[0].Rows[0][0].ToString().Trim();
+            txtemail.Text = ds.Tables[0].Rows[0][1].ToString().Trim();
+            txtemail.Enabled = false;
+            txtnombre.Enabled = false;
         }
 
         private void ver_detalle_venta_Load(object sender, EventArgs e)

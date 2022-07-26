@@ -69,7 +69,7 @@ namespace vista
 
         public bool valitel()
         {            
-            if (txtdni.Text.All(char.IsDigit)&&txtphone.Text!="")
+            if (txtphone.Text.All(char.IsDigit)&&txtphone.Text!="")
                 
             {
                 return true;
