@@ -277,3 +277,36 @@ E:\Users\alvar\Desktop\POO\Tp Acutalizado x2\trabajo-practico-poo-grupo-2\vista\
 E:\Users\alvar\Desktop\POO\Tp Acutalizado x2\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.pdb
 C:\Users\PC\Desktop\poo\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.GestionarVentas.resources
 C:\Users\PC\Desktop\poo\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.ver_detalle_venta.resources
+E:\Users\alvar\Desktop\POO\POO Final V1\trabajo-practico-poo-grupo-2\vista\bin\Debug\vista.exe.config
+E:\Users\alvar\Desktop\POO\POO Final V1\trabajo-practico-poo-grupo-2\vista\bin\Debug\vista.exe
+E:\Users\alvar\Desktop\POO\POO Final V1\trabajo-practico-poo-grupo-2\vista\bin\Debug\vista.pdb
+E:\Users\alvar\Desktop\POO\POO Final V1\trabajo-practico-poo-grupo-2\vista\bin\Debug\Controladora.dll
+E:\Users\alvar\Desktop\POO\POO Final V1\trabajo-practico-poo-grupo-2\vista\bin\Debug\EntityFramework.dll
+E:\Users\alvar\Desktop\POO\POO Final V1\trabajo-practico-poo-grupo-2\vista\bin\Debug\EntityFramework.SqlServer.dll
+E:\Users\alvar\Desktop\POO\POO Final V1\trabajo-practico-poo-grupo-2\vista\bin\Debug\Modelo.dll
+E:\Users\alvar\Desktop\POO\POO Final V1\trabajo-practico-poo-grupo-2\vista\bin\Debug\Controladora.pdb
+E:\Users\alvar\Desktop\POO\POO Final V1\trabajo-practico-poo-grupo-2\vista\bin\Debug\Controladora.dll.config
+E:\Users\alvar\Desktop\POO\POO Final V1\trabajo-practico-poo-grupo-2\vista\bin\Debug\Modelo.pdb
+E:\Users\alvar\Desktop\POO\POO Final V1\trabajo-practico-poo-grupo-2\vista\bin\Debug\Modelo.dll.config
+E:\Users\alvar\Desktop\POO\POO Final V1\trabajo-practico-poo-grupo-2\vista\bin\Debug\EntityFramework.xml
+E:\Users\alvar\Desktop\POO\POO Final V1\trabajo-practico-poo-grupo-2\vista\bin\Debug\EntityFramework.SqlServer.xml
+E:\Users\alvar\Desktop\POO\POO Final V1\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.csproj.AssemblyReference.cache
+E:\Users\alvar\Desktop\POO\POO Final V1\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.AgregarCarrito.resources
+E:\Users\alvar\Desktop\POO\POO Final V1\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.Articulos.resources
+E:\Users\alvar\Desktop\POO\POO Final V1\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.GestionarProveedores.resources
+E:\Users\alvar\Desktop\POO\POO Final V1\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.GestionarUsuarios.resources
+E:\Users\alvar\Desktop\POO\POO Final V1\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.Form1.resources
+E:\Users\alvar\Desktop\POO\POO Final V1\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.GestionarVentas.resources
+E:\Users\alvar\Desktop\POO\POO Final V1\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.login.resources
+E:\Users\alvar\Desktop\POO\POO Final V1\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.modificar_usuario.resources
+E:\Users\alvar\Desktop\POO\POO Final V1\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.Properties.Resources.resources
+E:\Users\alvar\Desktop\POO\POO Final V1\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.Registro.resources
+E:\Users\alvar\Desktop\POO\POO Final V1\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.VerCarrito.resources
+E:\Users\alvar\Desktop\POO\POO Final V1\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.ver_detalle_venta.resources
+E:\Users\alvar\Desktop\POO\POO Final V1\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.vista_admin.resources
+E:\Users\alvar\Desktop\POO\POO Final V1\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.VistaCliente.resources
+E:\Users\alvar\Desktop\POO\POO Final V1\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.csproj.GenerateResource.cache
+E:\Users\alvar\Desktop\POO\POO Final V1\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.csproj.CoreCompileInputs.cache
+E:\Users\alvar\Desktop\POO\POO Final V1\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.csproj.CopyComplete
+E:\Users\alvar\Desktop\POO\POO Final V1\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.exe
+E:\Users\alvar\Desktop\POO\POO Final V1\trabajo-practico-poo-grupo-2\vista\obj\Debug\vista.pdb

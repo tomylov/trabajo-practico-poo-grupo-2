@@ -23,7 +23,7 @@ namespace vista
 
         private void btnvta_Click(object sender, EventArgs e)
         {
-            string IDvta = dataGridView1.Rows[fila].Cells[0].Value.ToString();
+            int IDvta = Convert.ToInt32(dataGridView1.Rows[fila].Cells[0].Value);
             ver_detalle_venta frm = new ver_detalle_venta(IDvta);
             frm.Show();
         }
