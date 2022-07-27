@@ -31,6 +31,7 @@ namespace vista
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnvta = new System.Windows.Forms.Button();
+            this.btnestado = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,11 +54,22 @@ namespace vista
             this.btnvta.UseVisualStyleBackColor = true;
             this.btnvta.Click += new System.EventHandler(this.btnvta_Click);
             // 
+            // btnestado
+            // 
+            this.btnestado.Location = new System.Drawing.Point(211, 354);
+            this.btnestado.Name = "btnestado";
+            this.btnestado.Size = new System.Drawing.Size(110, 38);
+            this.btnestado.TabIndex = 2;
+            this.btnestado.Text = "cambiar estado venta";
+            this.btnestado.UseVisualStyleBackColor = true;
+            this.btnestado.Click += new System.EventHandler(this.btnestado_Click);
+            // 
             // GestionarVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnestado);
             this.Controls.Add(this.btnvta);
             this.Controls.Add(this.dataGridView1);
             this.Name = "GestionarVentas";
@@ -72,5 +84,6 @@ namespace vista
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnvta;
+        private System.Windows.Forms.Button btnestado;
     }
 }

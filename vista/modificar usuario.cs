@@ -14,19 +14,24 @@ namespace vista
     public partial class modificar_usuario : Form
     {
         int iduser;
+        string email ;
         public modificar_usuario(int id)
         {
             InitializeComponent();
             string CMD = string.Format("select * from Usuarios where Id="+ id);
             DataSet ds = Controladora.sql_consulta.Ejecutar(CMD);
             txtnom.Text = ds.Tables[0].Rows[0]["Nombre"].ToString().Trim();            
-            txtnom.Enabled = false;
-            txtcontra.Text = ds.Tables[0].Rows[0]["Contraseña"].ToString().Trim();
-            txtcontra2.Text= ds.Tables[0].Rows[0]["Contraseña"].ToString().Trim();
+            txtnom.Enabled = false;            
             txtmail.Text = ds.Tables[0].Rows[0]["Email"].ToString().Trim();
             txttel.Text = ds.Tables[0].Rows[0]["Telefono"].ToString().Trim();
             txtDNI.Text = ds.Tables[0].Rows[0]["DNI"].ToString().Trim();
             this.iduser = id;
+            email = txtmail.Text;
+            CMD = string.Format(" select CONVERT(varchar(max),dECRYPTBYPASSPHRASE('contraseña',Contraseña)) from Usuarios where Id="+id);
+            ds = Controladora.sql_consulta.Ejecutar(CMD);
+            txtcontra.Text = ds.Tables[0].Rows[0][0].ToString().Trim();
+            txtcontra2.Text = ds.Tables[0].Rows[0][0].ToString().Trim();
+
         }
 
         public bool valdni()
@@ -104,18 +109,25 @@ namespace vista
 
         public bool existmail()
         {
-            string CMD = string.Format("select count(Email) from Usuarios where Email='{0}'", txtmail.Text);
-            DataSet DS = Controladora.sql_consulta.Ejecutar(CMD);
-            int validador = Convert.ToInt32(DS.Tables[0].Rows[0][0]);
+            if (email != txtmail.Text)
+            {
+                string CMD = string.Format("select count(Email) from Usuarios where Email='{0}'", txtmail.Text);
+                DataSet DS = Controladora.sql_consulta.Ejecutar(CMD);
+                int validador = Convert.ToInt32(DS.Tables[0].Rows[0][0]);
 
-            if (validador == 0)
+                if (validador == 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    MessageBox.Show("ya hay un usuario creado con ese mail");
+                    return false;
+                }
+            }
+            else 
             {
                 return true;
-            }
-            else
-            {
-                MessageBox.Show("ya hay un usuario creado con ese mail");
-                return false;
             }
         }
         public bool valicontra()
@@ -137,7 +149,7 @@ namespace vista
         private void btnmodificar_Click(object sender, EventArgs e)
         {
             if (ValidacionEMAIL(txtmail.Text)&&existmail()&&valitel()&&valicontra()&&valdni()) {
-                string cmd = string.Format("update Usuarios set Email='{0}',Contraseña='{1}' ,Telefono='{2}' ,DNI='{3}' " +
+                string cmd = string.Format("update Usuarios set Email='{0}',Contraseña=ENCRYPTBYPASSPHRASE('contraseña','{1}') ,Telefono='{2}' ,DNI='{3}' " +
                     "where Id=" + iduser, txtmail.Text, txtcontra.Text, txttel.Text, txtDNI.Text);
                 //txtmail.Text +txtcontra.Text + txttel.Text + txtDNI.Text
                 Controladora.sql_consulta.Ejecutar(cmd);
@@ -156,6 +168,11 @@ namespace vista
         }
 
         private void modificar_usuario_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtmail_TextChanged(object sender, EventArgs e)
         {
 
         }

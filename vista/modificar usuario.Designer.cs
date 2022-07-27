@@ -69,37 +69,39 @@ namespace vista
             // 
             // txtnom
             // 
-            this.txtnom.Location = new System.Drawing.Point(148, 55);
+            this.txtnom.Location = new System.Drawing.Point(190, 53);
             this.txtnom.Name = "txtnom";
             this.txtnom.Size = new System.Drawing.Size(128, 20);
             this.txtnom.TabIndex = 2;
             // 
             // txtmail
             // 
-            this.txtmail.Location = new System.Drawing.Point(148, 94);
+            this.txtmail.Location = new System.Drawing.Point(190, 92);
             this.txtmail.Name = "txtmail";
             this.txtmail.Size = new System.Drawing.Size(128, 20);
             this.txtmail.TabIndex = 3;
+            this.txtmail.TextChanged += new System.EventHandler(this.txtmail_TextChanged);
             // 
             // txttel
             // 
-            this.txttel.Location = new System.Drawing.Point(148, 129);
+            this.txttel.Location = new System.Drawing.Point(190, 127);
             this.txttel.Name = "txttel";
             this.txttel.Size = new System.Drawing.Size(128, 20);
             this.txttel.TabIndex = 4;
             // 
             // txtcontra
             // 
-            this.txtcontra.Location = new System.Drawing.Point(148, 165);
+            this.txtcontra.Location = new System.Drawing.Point(190, 163);
             this.txtcontra.Name = "txtcontra";
             this.txtcontra.Size = new System.Drawing.Size(128, 20);
             this.txtcontra.TabIndex = 5;
+            this.txtcontra.UseSystemPasswordChar = true;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(78, 92);
+            this.label1.Location = new System.Drawing.Point(105, 90);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(59, 22);
             this.label1.TabIndex = 6;
@@ -109,7 +111,7 @@ namespace vista
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(53, 127);
+            this.label2.Location = new System.Drawing.Point(78, 125);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(86, 22);
             this.label2.TabIndex = 7;
@@ -119,7 +121,7 @@ namespace vista
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(34, 165);
+            this.label3.Location = new System.Drawing.Point(59, 161);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(108, 22);
             this.label3.TabIndex = 8;
@@ -129,7 +131,7 @@ namespace vista
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(59, 53);
+            this.label4.Location = new System.Drawing.Point(92, 51);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(78, 22);
             this.label4.TabIndex = 9;
@@ -137,7 +139,7 @@ namespace vista
             // 
             // txtDNI
             // 
-            this.txtDNI.Location = new System.Drawing.Point(148, 227);
+            this.txtDNI.Location = new System.Drawing.Point(190, 225);
             this.txtDNI.Name = "txtDNI";
             this.txtDNI.Size = new System.Drawing.Size(128, 20);
             this.txtDNI.TabIndex = 7;
@@ -146,7 +148,7 @@ namespace vista
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(92, 225);
+            this.label5.Location = new System.Drawing.Point(109, 225);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(45, 22);
             this.label5.TabIndex = 11;
@@ -157,24 +159,25 @@ namespace vista
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(29, 201);
+            this.label6.Location = new System.Drawing.Point(1, 195);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(108, 22);
+            this.label6.Size = new System.Drawing.Size(183, 22);
             this.label6.TabIndex = 12;
-            this.label6.Text = "Contraseña:";
+            this.label6.Text = "confirmar contraseña:";
             // 
             // txtcontra2
             // 
-            this.txtcontra2.Location = new System.Drawing.Point(148, 201);
+            this.txtcontra2.Location = new System.Drawing.Point(190, 197);
             this.txtcontra2.Name = "txtcontra2";
             this.txtcontra2.Size = new System.Drawing.Size(128, 20);
             this.txtcontra2.TabIndex = 6;
+            this.txtcontra2.UseSystemPasswordChar = true;
             // 
             // modificar_usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(330, 347);
+            this.ClientSize = new System.Drawing.Size(366, 347);
             this.Controls.Add(this.txtcontra2);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
