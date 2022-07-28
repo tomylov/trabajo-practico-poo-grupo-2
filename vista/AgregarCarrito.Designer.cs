@@ -175,18 +175,18 @@ namespace vista
             // 
             // btnSalir
             // 
-            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.Location = new System.Drawing.Point(453, 381);
+            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.Location = new System.Drawing.Point(418, 377);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(75, 23);
+            this.btnSalir.Size = new System.Drawing.Size(117, 46);
             this.btnSalir.TabIndex = 11;
-            this.btnSalir.Text = "enviar";
+            this.btnSalir.Text = "Enviar";
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // txtSub
             // 
-            this.txtSub.Location = new System.Drawing.Point(322, 381);
+            this.txtSub.Location = new System.Drawing.Point(283, 391);
             this.txtSub.Name = "txtSub";
             this.txtSub.Size = new System.Drawing.Size(108, 20);
             this.txtSub.TabIndex = 12;
@@ -195,7 +195,7 @@ namespace vista
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(238, 381);
+            this.label4.Location = new System.Drawing.Point(199, 391);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(69, 20);
             this.label4.TabIndex = 13;
@@ -203,11 +203,12 @@ namespace vista
             // 
             // btneliminar
             // 
-            this.btneliminar.Location = new System.Drawing.Point(76, 379);
+            this.btneliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btneliminar.Location = new System.Drawing.Point(56, 377);
             this.btneliminar.Name = "btneliminar";
-            this.btneliminar.Size = new System.Drawing.Size(75, 46);
+            this.btneliminar.Size = new System.Drawing.Size(117, 46);
             this.btneliminar.TabIndex = 14;
-            this.btneliminar.Text = "eliminar compra";
+            this.btneliminar.Text = "Eliminar Articulo";
             this.btneliminar.UseVisualStyleBackColor = true;
             this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click);
             // 
@@ -215,7 +216,7 @@ namespace vista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(570, 437);
+            this.ClientSize = new System.Drawing.Size(569, 438);
             this.Controls.Add(this.btneliminar);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtSub);

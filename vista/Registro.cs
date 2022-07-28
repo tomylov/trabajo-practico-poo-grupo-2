@@ -32,7 +32,7 @@ namespace vista
             }
             else
             {
-                MessageBox.Show("las contraseñas no coinciden");
+                MessageBox.Show("Las contraseñas no coinciden");
                 txtpass.Text = "";
                 txtpass2.Text = "";
                 return false;                
@@ -61,7 +61,7 @@ namespace vista
             }
             else
             {
-                MessageBox.Show("Deben ser 8 numeros");
+                MessageBox.Show("El DNI ingresado debe poseer 8 numeros");
                 return false;
             }
 
@@ -89,7 +89,7 @@ namespace vista
             }
             else
             {
-                MessageBox.Show("en nombre solo debe poseer letras");
+                MessageBox.Show("El nombre ingresado debe poseer unicamente letras");
                 txtname.Focus();
                 return false;
             }
@@ -120,7 +120,7 @@ namespace vista
             }
             else
             {
-                MessageBox.Show("no hay nada en el espacio mail");
+                MessageBox.Show("El campo email es un campo obligatorio");
                 //no es correcta, esta vacia
                 return false;
             }
@@ -139,7 +139,7 @@ namespace vista
             }
             else
             {
-                MessageBox.Show("ya hay un usuario creado con ese mail");
+                MessageBox.Show("Ya existe un usuario creado con ese mail");
                 return false;
             }
         }
@@ -165,7 +165,7 @@ namespace vista
                 cmd = string.Format("update Usuarios set Contraseña =ENCRYPTBYPASSPHRASE('contraseña','{0}') where Id="+id,txtpass.Text);
                 Controladora.sql_consulta.Ejecutar(cmd);
 
-                MessageBox.Show("usuario creado con exito");
+                MessageBox.Show("Usuario creado con exito");
                 this.Close();
             }
 

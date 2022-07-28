@@ -78,7 +78,7 @@ namespace vista
         {
             if (fila == -1)
             {
-                MessageBox.Show("debe seleccionar un usuario");
+                MessageBox.Show("Debe seleccionar un usuario");
                 return false;
             }
             else

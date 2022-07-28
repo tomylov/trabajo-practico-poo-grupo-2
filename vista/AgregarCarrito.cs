@@ -76,7 +76,7 @@ namespace vista
             }
             else
             {
-                MessageBox.Show("la cantidad debe ser un numero");
+                MessageBox.Show("La cantidad ingresada debe ser un numero");
                 return false;
             }
         }
@@ -96,7 +96,7 @@ namespace vista
                 return true;
             } else
             {
-                MessageBox.Show("se ha excedido de la cantidad disponible");
+                MessageBox.Show("Se ha excedido de la cantidad disponible");
                 return false;
             }
         }
@@ -149,7 +149,7 @@ namespace vista
             }
             catch (Exception)
             {
-                txtDesc.Text = "no existe el codigo seleccionado";
+                txtDesc.Text = "No existe el codigo ingresado";
                 valido = false;
                 
             }
@@ -206,7 +206,7 @@ namespace vista
 
             cmd = string.Format("update Ventas set estado='pendiente' where Id="+Idvta);
             sql_consulta.Ejecutar(cmd);
-            MessageBox.Show("venta recibida con exito");
+            MessageBox.Show("Venta recibida con exito");
             this.Close();
         }
     }

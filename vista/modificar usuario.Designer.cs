@@ -47,10 +47,10 @@ namespace vista
             // 
             // btnmodificar
             // 
-            this.btnmodificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnmodificar.Location = new System.Drawing.Point(53, 276);
+            this.btnmodificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnmodificar.Location = new System.Drawing.Point(99, 283);
             this.btnmodificar.Name = "btnmodificar";
-            this.btnmodificar.Size = new System.Drawing.Size(101, 41);
+            this.btnmodificar.Size = new System.Drawing.Size(109, 49);
             this.btnmodificar.TabIndex = 8;
             this.btnmodificar.Text = "Modificar";
             this.btnmodificar.UseVisualStyleBackColor = true;
@@ -58,10 +58,10 @@ namespace vista
             // 
             // btnsalir
             // 
-            this.btnsalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnsalir.Location = new System.Drawing.Point(166, 276);
+            this.btnsalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnsalir.Location = new System.Drawing.Point(234, 283);
             this.btnsalir.Name = "btnsalir";
-            this.btnsalir.Size = new System.Drawing.Size(101, 41);
+            this.btnsalir.Size = new System.Drawing.Size(109, 49);
             this.btnsalir.TabIndex = 10;
             this.btnsalir.Text = "Salir";
             this.btnsalir.UseVisualStyleBackColor = true;
@@ -69,14 +69,14 @@ namespace vista
             // 
             // txtnom
             // 
-            this.txtnom.Location = new System.Drawing.Point(190, 53);
+            this.txtnom.Location = new System.Drawing.Point(223, 56);
             this.txtnom.Name = "txtnom";
             this.txtnom.Size = new System.Drawing.Size(128, 20);
             this.txtnom.TabIndex = 2;
             // 
             // txtmail
             // 
-            this.txtmail.Location = new System.Drawing.Point(190, 92);
+            this.txtmail.Location = new System.Drawing.Point(223, 95);
             this.txtmail.Name = "txtmail";
             this.txtmail.Size = new System.Drawing.Size(128, 20);
             this.txtmail.TabIndex = 3;
@@ -84,14 +84,14 @@ namespace vista
             // 
             // txttel
             // 
-            this.txttel.Location = new System.Drawing.Point(190, 127);
+            this.txttel.Location = new System.Drawing.Point(223, 130);
             this.txttel.Name = "txttel";
             this.txttel.Size = new System.Drawing.Size(128, 20);
             this.txttel.TabIndex = 4;
             // 
             // txtcontra
             // 
-            this.txtcontra.Location = new System.Drawing.Point(190, 163);
+            this.txtcontra.Location = new System.Drawing.Point(223, 166);
             this.txtcontra.Name = "txtcontra";
             this.txtcontra.Size = new System.Drawing.Size(128, 20);
             this.txtcontra.TabIndex = 5;
@@ -101,7 +101,7 @@ namespace vista
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(105, 90);
+            this.label1.Location = new System.Drawing.Point(144, 93);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(59, 22);
             this.label1.TabIndex = 6;
@@ -111,7 +111,7 @@ namespace vista
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(78, 125);
+            this.label2.Location = new System.Drawing.Point(117, 128);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(86, 22);
             this.label2.TabIndex = 7;
@@ -121,7 +121,7 @@ namespace vista
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(59, 161);
+            this.label3.Location = new System.Drawing.Point(95, 166);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(108, 22);
             this.label3.TabIndex = 8;
@@ -131,7 +131,7 @@ namespace vista
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(92, 51);
+            this.label4.Location = new System.Drawing.Point(125, 54);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(78, 22);
             this.label4.TabIndex = 9;
@@ -139,7 +139,7 @@ namespace vista
             // 
             // txtDNI
             // 
-            this.txtDNI.Location = new System.Drawing.Point(190, 225);
+            this.txtDNI.Location = new System.Drawing.Point(223, 228);
             this.txtDNI.Name = "txtDNI";
             this.txtDNI.Size = new System.Drawing.Size(128, 20);
             this.txtDNI.TabIndex = 7;
@@ -148,7 +148,7 @@ namespace vista
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(109, 225);
+            this.label5.Location = new System.Drawing.Point(152, 228);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(45, 22);
             this.label5.TabIndex = 11;
@@ -159,15 +159,15 @@ namespace vista
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(1, 195);
+            this.label6.Location = new System.Drawing.Point(12, 200);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(183, 22);
+            this.label6.Size = new System.Drawing.Size(191, 22);
             this.label6.TabIndex = 12;
-            this.label6.Text = "confirmar contraseña:";
+            this.label6.Text = "Confirmar Contraseña:";
             // 
             // txtcontra2
             // 
-            this.txtcontra2.Location = new System.Drawing.Point(190, 197);
+            this.txtcontra2.Location = new System.Drawing.Point(223, 200);
             this.txtcontra2.Name = "txtcontra2";
             this.txtcontra2.Size = new System.Drawing.Size(128, 20);
             this.txtcontra2.TabIndex = 6;
@@ -177,7 +177,7 @@ namespace vista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(366, 347);
+            this.ClientSize = new System.Drawing.Size(413, 365);
             this.Controls.Add(this.txtcontra2);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);

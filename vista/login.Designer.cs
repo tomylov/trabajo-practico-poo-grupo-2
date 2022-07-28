@@ -40,7 +40,7 @@
             // 
             this.txtpass.Location = new System.Drawing.Point(154, 92);
             this.txtpass.Name = "txtpass";
-            this.txtpass.Size = new System.Drawing.Size(100, 20);
+            this.txtpass.Size = new System.Drawing.Size(120, 20);
             this.txtpass.TabIndex = 1;
             this.txtpass.UseSystemPasswordChar = true;
             // 
@@ -48,12 +48,12 @@
             // 
             this.txtuser.Location = new System.Drawing.Point(154, 41);
             this.txtuser.Name = "txtuser";
-            this.txtuser.Size = new System.Drawing.Size(100, 20);
+            this.txtuser.Size = new System.Drawing.Size(120, 20);
             this.txtuser.TabIndex = 0;
             // 
             // btnini
             // 
-            this.btnini.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnini.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnini.Location = new System.Drawing.Point(25, 143);
             this.btnini.Name = "btnini";
             this.btnini.Size = new System.Drawing.Size(120, 45);
@@ -84,7 +84,7 @@
             // 
             // btnclose
             // 
-            this.btnclose.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnclose.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnclose.Location = new System.Drawing.Point(154, 143);
             this.btnclose.Name = "btnclose";
             this.btnclose.Size = new System.Drawing.Size(120, 45);

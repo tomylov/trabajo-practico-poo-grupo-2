@@ -48,21 +48,23 @@ namespace vista
             // 
             // btnvta
             // 
-            this.btnvta.Location = new System.Drawing.Point(68, 354);
+            this.btnvta.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnvta.Location = new System.Drawing.Point(82, 356);
             this.btnvta.Name = "btnvta";
-            this.btnvta.Size = new System.Drawing.Size(115, 38);
+            this.btnvta.Size = new System.Drawing.Size(170, 57);
             this.btnvta.TabIndex = 1;
-            this.btnvta.Text = "ver venta";
+            this.btnvta.Text = "Visualizar Venta";
             this.btnvta.UseVisualStyleBackColor = true;
             this.btnvta.Click += new System.EventHandler(this.btnvta_Click);
             // 
             // btnestado
             // 
-            this.btnestado.Location = new System.Drawing.Point(211, 354);
+            this.btnestado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnestado.Location = new System.Drawing.Point(279, 356);
             this.btnestado.Name = "btnestado";
-            this.btnestado.Size = new System.Drawing.Size(110, 38);
+            this.btnestado.Size = new System.Drawing.Size(167, 57);
             this.btnestado.TabIndex = 2;
-            this.btnestado.Text = "cambiar estado venta";
+            this.btnestado.Text = "Cambiar estado de Venta";
             this.btnestado.UseVisualStyleBackColor = true;
             this.btnestado.Click += new System.EventHandler(this.btnestado_Click);
             // 
