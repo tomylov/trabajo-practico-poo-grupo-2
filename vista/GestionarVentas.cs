@@ -38,7 +38,7 @@ namespace vista
             dataGridView1.ReadOnly = true;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
-            dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.Green;
+            dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.Turquoise;
             dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.Black;
             dataGridView1.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.Beige;
             dataGridView1.ColumnHeadersDefaultCellStyle.SelectionForeColor = Color.Green;

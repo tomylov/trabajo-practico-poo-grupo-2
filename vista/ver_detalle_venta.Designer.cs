@@ -34,6 +34,7 @@ namespace vista
             this.txtemail = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnsalir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -85,11 +86,22 @@ namespace vista
             this.label2.TabIndex = 4;
             this.label2.Text = "Email:";
             // 
+            // btnsalir
+            // 
+            this.btnsalir.Location = new System.Drawing.Point(611, 446);
+            this.btnsalir.Name = "btnsalir";
+            this.btnsalir.Size = new System.Drawing.Size(103, 48);
+            this.btnsalir.TabIndex = 5;
+            this.btnsalir.Text = "salir";
+            this.btnsalir.UseVisualStyleBackColor = true;
+            this.btnsalir.Click += new System.EventHandler(this.btnsalir_Click);
+            // 
             // ver_detalle_venta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(787, 437);
+            this.ClientSize = new System.Drawing.Size(787, 535);
+            this.Controls.Add(this.btnsalir);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtemail);
@@ -111,5 +123,6 @@ namespace vista
         private System.Windows.Forms.TextBox txtemail;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnsalir;
     }
 }

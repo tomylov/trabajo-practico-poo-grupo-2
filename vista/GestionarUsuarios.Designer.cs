@@ -75,7 +75,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(12, 41);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(704, 250);
+            this.dataGridView1.Size = new System.Drawing.Size(1004, 250);
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -83,7 +83,7 @@
             // btnactualizar
             // 
             this.btnactualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnactualizar.Location = new System.Drawing.Point(572, 332);
+            this.btnactualizar.Location = new System.Drawing.Point(849, 332);
             this.btnactualizar.Name = "btnactualizar";
             this.btnactualizar.Size = new System.Drawing.Size(138, 41);
             this.btnactualizar.TabIndex = 4;
@@ -95,7 +95,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(773, 407);
+            this.ClientSize = new System.Drawing.Size(1050, 407);
             this.Controls.Add(this.btnactualizar);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btneliminar);

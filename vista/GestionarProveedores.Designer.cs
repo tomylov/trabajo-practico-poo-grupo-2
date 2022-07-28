@@ -81,6 +81,7 @@
             this.Controls.Add(this.btnadd);
             this.Name = "GestionarProveedores";
             this.Text = "GestionarProveedores";
+            this.Load += new System.EventHandler(this.GestionarProveedores_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

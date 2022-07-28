@@ -16,5 +16,10 @@ namespace vista
         {
             InitializeComponent();
         }
+
+        private void GestionarProveedores_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

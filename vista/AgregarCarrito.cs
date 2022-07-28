@@ -37,7 +37,7 @@ namespace vista
             dataGridView1.ReadOnly = true;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
-            dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.Green;
+            dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.Turquoise;
             dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.Black;
             dataGridView1.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.Beige;
             dataGridView1.ColumnHeadersDefaultCellStyle.SelectionForeColor = Color.Green;
@@ -140,6 +140,7 @@ namespace vista
         private void txtCod_TextChanged(object sender, EventArgs e)
         {
             bool valido;
+            errorProvider1.SetError(btnSalir,"");
             try 
             {
                 string CMD = string.Format("Select * from Articulos where id= " + txtCod.Text);
@@ -198,16 +199,32 @@ namespace vista
             }
         }
 
+        public bool validetalle()
+        {
+
+            if (dataGridView1.Rows.Count == 0)
+            {
+                errorProvider1.SetError(btnSalir,"Para enviar una venta debe cargar un articulo como mínimo");
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            string cmd = string.Format("select count(Id) from Ventas");
-            DataSet ds = sql_consulta.Ejecutar(cmd);
-            string Idvta =  ds.Tables[0].Rows[0][0].ToString();
+            if (validetalle()) {
+                string cmd = string.Format("select count(Id) from Ventas");
+                DataSet ds = sql_consulta.Ejecutar(cmd);
+                string Idvta = ds.Tables[0].Rows[0][0].ToString();
 
-            cmd = string.Format("update Ventas set estado='pendiente' where Id="+Idvta);
-            sql_consulta.Ejecutar(cmd);
-            MessageBox.Show("Venta recibida con exito");
-            this.Close();
+                cmd = string.Format("update Ventas set estado='pendiente' where Id=" + Idvta);
+                sql_consulta.Ejecutar(cmd);
+                MessageBox.Show("Venta recibida con exito");
+                this.Close();
+            }
         }
     }
 }

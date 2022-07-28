@@ -18,6 +18,8 @@ namespace vista
             InitializeComponent();
             string CMD = string.Format("select * from Usuarios where PerfilId=3");
             dataGridView1.DataSource = Controladora.sql_consulta.Ejecutar(CMD).Tables[0];
+            btneliminar.Enabled = false;
+            btnmodificar.Enabled = false;
             datagridinterfaz();
         }
 
@@ -35,7 +37,7 @@ namespace vista
             dataGridView1.ReadOnly = true;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
-            dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.Green;
+            dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.Turquoise;
             dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.Black;
             dataGridView1.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.Beige;
             dataGridView1.ColumnHeadersDefaultCellStyle.SelectionForeColor = Color.Green;
@@ -59,12 +61,10 @@ namespace vista
 
         private void btnmodificar_Click(object sender, EventArgs e)
         {
-            if (valifila())
-            {
+            
                 int id = Convert.ToInt32(dataGridView1.Rows[fila].Cells[0].Value);
                 modificar_usuario frm = new modificar_usuario(id);
-                frm.Show();
-            }
+                frm.Show();            
             
         }
 
@@ -74,33 +74,32 @@ namespace vista
             frm.Show();            
         }
 
-        private bool valifila()
-        {
-            if (fila == -1)
-            {
-                MessageBox.Show("Debe seleccionar un usuario");
-                return false;
-            }
-            else
-            {
-                return true;
-            }
-        }
+        
 
         private void btneliminar_Click(object sender, EventArgs e)
         {
-            if(valifila())
-            {
+            
                 int id = Convert.ToInt32(dataGridView1.Rows[fila].Cells[0].Value);
                 string cmd = string.Format(" delete from Usuarios where Id = "+id);
                 Controladora.sql_consulta.Ejecutar(cmd);
                 dataGridView1.Rows.RemoveAt(fila);
-            }            
+                    
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             fila = e.RowIndex;
+            int valor = dataGridView1.Rows.Count;
+            if (fila == -1 || fila == valor)
+            {
+                btnmodificar.Enabled = false;
+                btneliminar.Enabled = false;
+            }
+            else
+            {
+                btneliminar.Enabled = true;
+                btnmodificar.Enabled = true;
+            }
         }
 
         private void GestionarUsuarios_Load(object sender, EventArgs e)
