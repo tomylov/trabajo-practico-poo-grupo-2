@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtname = new System.Windows.Forms.TextBox();
             this.txtpass2 = new System.Windows.Forms.TextBox();
             this.txtdni = new System.Windows.Forms.TextBox();
@@ -42,6 +43,8 @@
             this.button2 = new System.Windows.Forms.Button();
             this.txtphone = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtname
@@ -170,6 +173,10 @@
             this.label6.TabIndex = 13;
             this.label6.Text = "Telefono:";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // Registro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -191,6 +198,7 @@
             this.Controls.Add(this.txtname);
             this.Name = "Registro";
             this.Text = "Registro";
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -212,5 +220,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox txtphone;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

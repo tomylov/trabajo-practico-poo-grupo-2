@@ -28,11 +28,14 @@ namespace vista
         {
             if (txtpass.Text == txtpass2.Text&& txtpass.Text!="")
             {
+                errorProvider1.SetError(txtpass,"");
+                errorProvider1.SetError(txtpass2,"");
                 return true;
             }
             else
             {
-                MessageBox.Show("Las contraseñas no coinciden");
+                errorProvider1.SetError(txtpass,"Las contraseñas no coinciden");
+                errorProvider1.SetError(txtpass2, "Las contraseñas no coinciden");
                 txtpass.Text = "";
                 txtpass2.Text = "";
                 return false;                
@@ -49,7 +52,7 @@ namespace vista
             }
             else
             {
-                MessageBox.Show("El dni debe tener 8 caracteres");
+                errorProvider1.SetError(txtdni,"El dni debe tener 8 caracteres");
                 txtdni.Focus();
                 validador = false;
                 return false;
@@ -57,11 +60,12 @@ namespace vista
 
             if(txtdni.Text.All(char.IsDigit)&&validador==true)
             {
+                errorProvider1.SetError(txtdni, "");
                 return true;
             }
             else
             {
-                MessageBox.Show("El DNI ingresado debe poseer 8 numeros");
+                errorProvider1.SetError(txtdni,"El DNI ingresado debe poseer 8 numeros");
                 return false;
             }
 
@@ -72,11 +76,12 @@ namespace vista
             if (txtphone.Text.All(char.IsDigit)&&txtphone.Text!="")
                 
             {
+                errorProvider1.SetError(txtphone, "");
                 return true;
             }
             else
             {
-                MessageBox.Show("Deben ser solo numeros en el telefono");                
+                errorProvider1.SetError(txtphone, "Deben ser solo numeros en el telefono");
                 return false;
             }
         }
@@ -85,11 +90,12 @@ namespace vista
         {
             if(txtname.Text.All(char.IsLetter)&&txtname.Text!="")
             {
+                errorProvider1.SetError(txtname,"");
                 return true;
             }
             else
             {
-                MessageBox.Show("El nombre ingresado debe poseer unicamente letras");
+                errorProvider1.SetError(txtname,"El nombre ingresado debe poseer unicamente letras");
                 txtname.Focus();
                 return false;
             }
@@ -135,11 +141,12 @@ namespace vista
 
             if (validador==0)
             {
+                errorProvider1.SetError(txtmail, "");
                 return true;
             }
             else
             {
-                MessageBox.Show("Ya existe un usuario creado con ese mail");
+                errorProvider1.SetError(txtmail,"Ya existe un usuario creado con ese mail");                               
                 return false;
             }
         }

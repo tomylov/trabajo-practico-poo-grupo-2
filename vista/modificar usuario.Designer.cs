@@ -29,6 +29,7 @@ namespace vista
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnmodificar = new System.Windows.Forms.Button();
             this.btnsalir = new System.Windows.Forms.Button();
             this.txtnom = new System.Windows.Forms.TextBox();
@@ -43,6 +44,8 @@ namespace vista
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtcontra2 = new System.Windows.Forms.TextBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnmodificar
@@ -173,6 +176,10 @@ namespace vista
             this.txtcontra2.TabIndex = 6;
             this.txtcontra2.UseSystemPasswordChar = true;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // modificar_usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -195,6 +202,7 @@ namespace vista
             this.Name = "modificar_usuario";
             this.Text = "modificar_usuario";
             this.Load += new System.EventHandler(this.modificar_usuario_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -216,5 +224,6 @@ namespace vista
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtcontra2;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

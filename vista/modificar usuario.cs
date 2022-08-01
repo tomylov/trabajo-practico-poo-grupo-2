@@ -38,12 +38,12 @@ namespace vista
         {
             bool validador = false;
             if (txtDNI.Text.Length == 8)
-            {
+            {                
                 validador = true;
             }
             else
             {
-                MessageBox.Show("El dni debe tener 8 caracteres");
+                errorProvider1.SetError(txtDNI,"El dni debe tener 8 caracteres");
                 txtDNI.Focus();
                 validador = false;
                 return false;
@@ -51,11 +51,12 @@ namespace vista
 
             if (txtDNI.Text.All(char.IsDigit) && validador == true)
             {
+                errorProvider1.SetError(txtDNI, "");
                 return true;
             }
             else
             {
-                MessageBox.Show("Deben ser 8 numeros");
+                errorProvider1.SetError(txtDNI,"Deben ser 8 numeros");
                 return false;
             }
 
@@ -66,11 +67,12 @@ namespace vista
             if (txttel.Text.All(char.IsDigit) && txttel.Text != "")
 
             {
+                errorProvider1.SetError(txttel, "");
                 return true;
             }
             else
             {
-                MessageBox.Show("Deben ser solo numeros en el telefono");
+                errorProvider1.SetError(txttel,"Deben ser solo numeros en el telefono");
                 return false;
             }
         }
@@ -121,7 +123,7 @@ namespace vista
                 }
                 else
                 {
-                    MessageBox.Show("ya hay un usuario creado con ese mail");
+                    MessageBox.Show("ya hay un usuario creado con ese mail","validacion",MessageBoxButtons.OK,MessageBoxIcon.Error);
                     return false;
                 }
             }
@@ -134,11 +136,14 @@ namespace vista
         {
             if (txtcontra.Text == txtcontra2.Text && txtcontra.Text != "")
             {
+                errorProvider1.SetError(txtcontra, "");
+                errorProvider1.SetError(txtcontra2, "");
                 return true;
             }
             else
             {
-                MessageBox.Show("las contraseñas no coinciden");
+                errorProvider1.SetError(txtcontra, "las contraseñas no coinciden");
+                errorProvider1.SetError(txtcontra2, "las contraseñas no coinciden");
                 txtcontra.Text = "";
                 txtcontra2.Text = "";
                 return false;

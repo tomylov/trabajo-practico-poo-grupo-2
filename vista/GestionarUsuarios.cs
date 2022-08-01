@@ -78,11 +78,14 @@ namespace vista
 
         private void btneliminar_Click(object sender, EventArgs e)
         {
-            
+            DialogResult DG = MessageBox.Show("Esta seguro que desea eliminar al usuario seleccionado?","control",MessageBoxButtons.YesNo);
+            if (DG==DialogResult.Yes) {
                 int id = Convert.ToInt32(dataGridView1.Rows[fila].Cells[0].Value);
-                string cmd = string.Format(" delete from Usuarios where Id = "+id);
+                string cmd = string.Format(" delete from Usuarios where Id = " + id);
                 Controladora.sql_consulta.Ejecutar(cmd);
                 dataGridView1.Rows.RemoveAt(fila);
+                MessageBox.Show("Usuario eliminado con exito");
+            }
                     
         }
 
